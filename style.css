@@ -1,1 +1,50 @@
-d
+#content {
+
+	width: 500px; 
+	margin: auto;
+	margin-top: 50px;
+
+}
+
+body {
+
+	background-color: #FAFEFF; 
+
+}
+
+img {
+
+	height: 125px;
+	display: block;
+	margin: auto auto;
+
+}
+
+h1 {
+
+	font-family: 'Quicksand', sans-serif;
+	font-size: 130%;
+	font-style: bold;
+	color: #00A1D3;
+
+}
+
+p {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 90%;
+
+}
+
+table {
+	font-size: 10px;
+	font-family: 'Istok Web', sans-serif;
+	color: #7D8C90;
+}
+
+td {
+	width: 250px;
+}
+
+.left {
+	width: 130px;
+}
