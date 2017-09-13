@@ -6,10 +6,6 @@ layout: home
 title: Erin's Blog
 ---
 
-<a class="extra" href="/">home</a>
-<a class="extra" href="/about">about</a>
-
-<h1>Blog Posts</h1>
   <ul class="posts">
     {% for post in site.posts %}
       <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
