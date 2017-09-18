@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "Intro"
+date:   2017-09-18 01:09:27 -0400
+categories: jekyll update
+---
+
+Hello! Before I get into everything I'm learning, first I'd like to share a little bit about myself. 
+
