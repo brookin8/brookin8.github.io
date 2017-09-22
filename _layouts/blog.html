@@ -13,7 +13,7 @@
         <style>
             a {
                 text-decoration:none;
-                color:#ffffff;
+                color:#EA632B;
             }
             a.hover {
                 text-decoration: underline;
@@ -24,11 +24,16 @@
         
         {% include header.html %}
 
-        <br>
-        <br>
-        <br>
+        <div class="container-fluid">
 
-          {{ content }}
+            <h1>Blog Posts</h1>
 
+              <ul class="posts">
+                {% for post in site.posts %}
+                  <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+                {% endfor %}
+              </ul>
+
+        </div>
     </body>
 </html>
