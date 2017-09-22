@@ -4,13 +4,17 @@ title: Erin's Blog
 layout: index
 ---
 
-<div class = "container-fluid"; style= "margin-top:200px;">		 
-	<h1>Blog Posts</h1>
-		<p>
-			        <ul>
-	    			{% for post in site.posts %}
-	      			<li><span>{{ post.date | date_to_string }}</span> : <a href="{{ post.url }}">{{ post.title }}</a></li>
-	    			{% endfor %}
-	  				</ul>
-		</p>
+<div class = "container-fluid";>		 
+	<div style= "margin:auto;">
+	<br>
+	<br>
+		<h1>Blog Posts</h1>
+			<p>
+				        <ul>
+		    			{% for post in site.posts %}
+		      			<li><span>{{ post.date | date_to_string }}</span> : <a href="{{ post.url }}">{{ post.title }}</a></li>
+		    			{% endfor %}
+		  				</ul>
+			</p>
+	</div>
 </div>
