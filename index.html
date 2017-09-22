@@ -9,6 +9,7 @@ layout: index
 		hr:before {
 		  content: "\2727"; /* section sign */
 		  background-color: black;
+		  height:2em;
 		  color:black;
 		  display: inline; /* for vertical centering and background knockout */
 		  position:relative;
@@ -18,11 +19,36 @@ layout: index
 		hr:after {
 		  content: "\2727"; /* section sign */
 		  background-color: black;
+		  height: 2em;
 		  color:black;
 		  display: inline; /* for vertical centering and background knockout */
 		  position:relative;
 		  padding: 0 0.5em; /* size of background color knockout */
 		}
+
+		hr.white:before {
+			content: "\2727"; /* section sign */
+		  background-color: white;
+		  height:5px;
+		  color:white;
+		  display: inline; /* for vertical centering and background knockout */
+		  position:relative;
+		  padding: 0 0.5em; /* size of background color knockout */
+
+		}
+
+		hr.white:after {
+			content: "\2727"; /* section sign */
+		  background-color: white;
+		  height:5px;
+		  color:white;
+		  display: inline; /* for vertical centering and background knockout */
+		  position:relative;
+		  padding: 0 0.5em; /* size of background color knockout */
+		}
+
+
+
 	</style>
 </head>
 
@@ -67,16 +93,16 @@ layout: index
 
 		<section id ="about">
 			<div class ="container-fluid" style="background-color:#6E7783;color:white;padding-top:118px">	
-				<div style= "margin:auto; vertical-align:center; padding-bottom:105px">
+				<div style= "margin:auto; vertical-align:center; padding-bottom:118px">
 					<div class="row justify-content-center">
 						<div class = "col">
 							<h1 style="text-align:center;font-family: 'Lobster', cursive;">About Me</h1>
-							<hr>
+							<hr class = "white-hr">
 						</div>	
 					</div>	
 					<div class ="row justify-content-center">
 						<div class ="col-4">
-							<img src="/About_Me.jpg" style="padding:20px;">
+							<img src="/About_Me.jpg" style="padding:;">
 						</div>
 					</div>
 					<div class="row justify-content-center">
@@ -94,7 +120,7 @@ layout: index
 				<br>
 				<div class = "row justify-content-center">
 					<div class = "col">
-						<h1 style="text-align:center;padding-top:105px; font-family: 'Lobster', cursive;">Contact Me</h1>
+						<h1 style="text-align:center;padding-top:118px; font-family: 'Lobster', cursive;">Contact Me</h1>
 						<hr>
 					</div>	
 				</div>
