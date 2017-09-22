@@ -6,16 +6,27 @@ permalink: /blog/
 title: Erin's Blog
 layout: index
 ---
+<head>
+	<style>
+		a {
+            text-decoration:none;
+            color:#EA632C;
+            }
+        a.hover {
+            text-decoration: underline;
+            }
+	</style>
+</head>
 
-<div class="container-fluid">
+<body> 
 
-    <h1>Blog Posts</h1>
+	 <div class="container-fluid">
+	 <h1>Blog Posts</h1>
 
-        <ul class="posts">
-            {% for post in site.posts %}
-                <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-            {% endfor %}
-         </ul>
-              
- </div>
-
+	        <ul class="posts">
+	            {% for post in site.posts %}
+	                <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+	            {% endfor %}
+	         </ul>     
+	 </div>
+</body>
