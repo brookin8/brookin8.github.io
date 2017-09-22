@@ -6,44 +6,29 @@ layout: index
 <head>
 	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 	<style>
-		hr:before {
-		  content: "\2727"; /* section sign */
+		hr.black{
+		  width: 50%;
+		  margin-left:auto;
+		  margin-right:auto;
 		  background-color: black;
 		  color:black;
-		  display: inline; /* for vertical centering and background knockout */
-		  position:relative;
-		  padding: 0 0.5em; /* size of background color knockout */
-		}
-
-		hr:after {
-		  content: "\2727"; /* section sign */
-		  background-color: black;
+		  border:0 none;
 		  height: 5px;
+		  background: "\2727" no-repeat center; /* section sign */
+		}
+
+
+		hr.white{
+			width: 50%;
+		  margin-left:auto;
+		  margin-right:auto;
+		  background-color: black;
 		  color:black;
-		  display: inline; /* for vertical centering and background knockout */
-		  position:relative;
-		  padding: 0 0.5em; /* size of background color knockout */
+		  border:0 none;
+		  height: 5px;
+		  background: "\2727" no-repeat center; /* section sign */
 		}
 
-		hr.white:before {
-			content: "\2727"; /* section sign */
-		  background-color: white;
-		  color:white;
-		  display: inline; /* for vertical centering and background knockout */
-		  position:relative;
-		  padding: 0 0.5em; /* size of background color knockout */
-
-		}
-
-		hr.white-hr:after {
-			content: "\2727"; /* section sign */
-		  background-color: white;
-		  height:5px;
-		  color:white;
-		  display: inline; /* for vertical centering and background knockout */
-		  position:relative;
-		  padding: 0 0.5em; /* size of background color knockout */
-		}
 
 
 
@@ -59,7 +44,7 @@ layout: index
 				<div class = "row justify-content-center">
 					<div class = "col">
 						<h1 style="text-align:center; vertical-align:center; padding-top:105px; font-family: 'Lobster', cursive;">Portfolio</h1>
-						<hr>
+						<hr class="black">
 					</div>	
 				</div>
 				<div class = "row justify-content-center">
@@ -95,7 +80,7 @@ layout: index
 					<div class="row justify-content-center">
 						<div class = "col">
 							<h1 style="text-align:center;font-family: 'Lobster', cursive;">About Me</h1>
-							<hr class = "white-hr">
+							<hr class = "white">
 						</div>	
 					</div>	
 					<div class ="row justify-content-center">
@@ -119,7 +104,7 @@ layout: index
 				<div class = "row justify-content-center">
 					<div class = "col">
 						<h1 style="text-align:center;padding-top:118px; font-family: 'Lobster', cursive;">Contact Me</h1>
-						<hr>
+						<hr class="black">
 					</div>	
 				</div>
 				<div class = "row justify-content-center">
