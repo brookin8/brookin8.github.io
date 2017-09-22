@@ -6,7 +6,7 @@ layout: index
 <head>
 	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 	<style>
-		hr.black{
+		hr.black:after{
 		  width: 50%;
 		  margin-left:auto;
 		  margin-right:auto;
@@ -14,11 +14,23 @@ layout: index
 		  color:black;
 		  border:0 none;
 		  height: 5px;
-		  background: "\2727" no-repeat center; /* section sign */
+		  background-image: "\2727" no-repeat center; /* section sign */
+		}
+
+		hr.black:before{
+		  width: 50%;
+		  margin-left:auto;
+		  margin-right:auto;
+		  background-color: black;
+		  color:black;
+		  border:0 none;
+		  height: 5px;
+		  background-image: "\2727" no-repeat center; /* section sign */
 		}
 
 
-		hr.white{
+
+		hr.white:before{
 			width: 50%;
 		  margin-left:auto;
 		  margin-right:auto;
@@ -26,9 +38,19 @@ layout: index
 		  color:black;
 		  border:0 none;
 		  height: 5px;
-		  background: "\2727" no-repeat center; /* section sign */
+		  background-image: "\2727" no-repeat center; /* section sign */
 		}
 
+		hr.white:after{
+			width: 50%;
+		  margin-left:auto;
+		  margin-right:auto;
+		  background-color: black;
+		  color:black;
+		  border:0 none;
+		  height: 5px;
+		  background-image: "\2727" no-repeat center; /* section sign */
+		}
 
 
 
