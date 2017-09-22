@@ -10,10 +10,12 @@ layout: index
 		 <br>
 		 <br>
 		 <br>
-		 <br>
-		 <br>
 		 <h1>Blog Posts</h1>
 
 		        <p>
-		        <a href="https://www.google.com/">Google!</a>
+			        <ul>
+	    			{% for post in site.posts %}
+	      			<li><span>{{ post.date | date_to_string }}</span> : <a href="{{ post.url }}">{{ post.title }}</a></li>
+	    			{% endfor %}
+	  				</ul>
 		        </p>
