@@ -4,20 +4,13 @@ title: Erin's Blog
 layout: index
 ---
 
-<div container = "fixed"; style= "margin:20%;"">		 
-<br>
-		 <br>
-		 <br>
-		 <br>
-		 <br>
-		 <br>
-		 <h1>Blog Posts</h1>
-
-		        <p>
+<div container = "fixed"; style= "margin:20%,0,0,0;">		 
+	<h1>Blog Posts</h1>
+		<p>
 			        <ul>
 	    			{% for post in site.posts %}
 	      			<li><span>{{ post.date | date_to_string }}</span> : <a href="{{ post.url }}">{{ post.title }}</a></li>
 	    			{% endfor %}
 	  				</ul>
-		        </p>
+		</p>
 </div>
