@@ -6,12 +6,22 @@
         <title>{{ page.title }}</title>
         <meta name="viewport" content="width=device-width">
         <meta name="generator" content="Jekyll 1.5.0" />
-         <link rel="stylesheet" href="/style.css">
-        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <link rel="stylesheet" href="/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Istok+Web|Quicksand" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Condiment|Englebert|Stalemate|Yellowtail" rel="stylesheet">
+        <style>
+            a {
+                text-decoration:none;
+                color:#ffffff;
+            }
+            a.hover {
+                text-decoration: underline;
+            }
+        </style>
     </head>
     <body>
-        <a class="extra" href="/">Home</a>
-        <a class="extra" href="/blog">Blog</a>
+        {% include header.html %}
 
           {{ content }}
 
