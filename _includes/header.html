@@ -5,6 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width", initial-scale=1, shrink-to-fit=yes>
 
+    <!-- Jekyll Code-->
+    <meta name="generator" content="Jekyll 1.5.0" />
+
     <!-- Bootstrap CSS-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 
@@ -23,14 +26,6 @@
     <!-- Placeholder for adding custom CSS-->
     <style>
 
-      a {
-        text-decoration:none;
-        color:#ffffff;
-            }
-      a.hover {
-        text-decoration: underline;
-            }
-
       @media only screen 
         and (max-width: 736px) {
           h1 {
@@ -46,10 +41,35 @@
           .nav-item {
             font-size: 60%;
           }
+          nav ul {
+            display:none;
+          }
+          nav select {
+            display: inline-block;
+          }
+          a {
+            text-decoration:none;
+            color:#000000;
+          }
+          a.hover {
+            color:#E37E49;
+          }
+
         }
 
       @media only screen 
         and (min-width: 736px) {
+          nav select {
+            display: none;
+          }
+          a {
+            text-decoration:none;
+            color:#000000;
+          }
+          a.hover {
+            color:#E37E49;
+          }
+
           h1 {
             font-size:300%;
           }
@@ -66,7 +86,7 @@
         }
 
     </style>
-    <title>Erin Wilcox</title>
+    <title>{{ page.title }}</title>
   </head>
     
 <body>
@@ -83,6 +103,15 @@
                       <li class ="nav-item"><a class ="nav-link" href="/#contact" style ="color:#ffffff;">Contact</a></li>
                       <li class ="nav-item"><a class ="nav-link" href="/blog" style ="color:#ffffff;">Blog</a></li>
                   </ul>
+          </div>
+          <div>
+              <select>
+                  <option value = "" selected = "selected">Select</option>
+                  <option value = "/#portfolio">Portfolio</option>
+                  <option value = "/#about">About</option>
+                  <option value = "/#contact">Contact</option>
+                  <option value = "/blog">Blog</option>
+              </select>
           </div>
         </nav>
       </div>
