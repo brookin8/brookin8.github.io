@@ -4,5 +4,18 @@ title:  "Intro"
 date:   2017-09-18 01:09:27 -0400
 ---
 
-Hello! Before I get into everything I'm learning, first I'd like to share a little bit about myself. 
+So, what's this blog about?
+
+To be honest, nothing that isn't already covered in hundreds of other blogs. 
+
+I'm currently on a personal journey towards becoming a developer, and am going to be recording and flushing out everything I learn here.
+
+The only thing that makes this blog different is that, well, it's mine. 
+
+I will be describing all of the concepts and tools in a way that makes sense to my brain - that is simple, broad strokes, and as a smaller piece in the overall larger puzzle.  
+
+Everybody learns and understands things differently, and hopefully this can be an additional resource for the other folks out there who happen to learn the same way I do. 
+
+
+
 
