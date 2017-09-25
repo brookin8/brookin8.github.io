@@ -21,9 +21,21 @@
     
     <!-- Placeholder for adding custom CSS-->
     <style>
-    a.hover {
-      color:navy;
-      text-decoration: underline;
+    
+    .nav.navbar-nav.navbar-right a {
+      color:#ffffff;
+    }
+
+    .nav.navbar-nav.navbar-right a:hover {
+      color:#E37E49;
+    }
+
+    #nameHeader {
+      color:#ffffff;
+    }
+
+    #nameHeader:hover {
+      color:#E37E49;
     }
 
       @media only screen 
@@ -61,9 +73,6 @@
 
       @media only screen 
         and (min-width: 736px) {
-          a.hover {
-            color:#E37E49;
-          }
 
           h1 {
             font-size:300%;
@@ -71,21 +80,41 @@
           h3 {
             font-size:175%;
           }
+         
+         #desktopMenu {
+            height:15%;
+            padding-left:5%;
+            padding-right:5%;
+            padding-top:2%;
+            padding-bottom:2%;
+         }
+         #bs-example-navbar-collapse-1.collapse.navbar-collapse {
+            height:15%;
+            font-size:127%;
+         }
+         .navbar-header {
+            height:15%;
+         }
+
          .navbar-brand {
             font-size:250%;
             color:#ffffff; 
             font-family: 'Atomic Age', cursive;
-
           }
+
           #navbar-collapse {
             font-size: 120%;
             color:#ffffff; 
           }
+          
+          #blogHomePageBody {
+            font-size:120%;
+          }
+
           p {
             font-size:110%;
           }
         }
-
     </style>
     <title>{{ page.title }}</title>
   </head>
@@ -93,7 +122,7 @@
 <body class="index" id="page-top">
 
 <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top" style="background-color:#92CECC;">
+    <nav class="navbar navbar-default navbar-fixed-top" style="background-color:#92CECC;" id="desktopMenu">
         <!--<div class="container">-->
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -103,23 +132,23 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/#page-top" style="color:#ffffff;">Erin Wilcox</a>
+                <a class="navbar-brand" id="nameHeader" href="/#page-top">Erin Wilcox</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="/#portfolio" style="color:#ffffff;">Portfolio</a>
+                        <a href="/#portfolio">Portfolio</a>
                     </li>
                     <li>
-                        <a href="/#about" style="color:#ffffff;">About</a>
+                        <a href="/#about">About</a>
                     </li>
                     <li>
-                        <a href="/#contact" style="color:#ffffff;">Contact</a>
+                        <a href="/#contact">Contact</a>
                     </li>
                     <li>
-                        <a href="/blog" style="color:#ffffff;">Blog</a>
+                        <a href="/blog">Blog</a>
                     </li>
                 </ul>
             </div>
