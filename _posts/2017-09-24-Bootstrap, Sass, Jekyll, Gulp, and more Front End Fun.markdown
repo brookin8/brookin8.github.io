@@ -71,11 +71,7 @@ Github also allows each user to host one website for free, that can be accessed 
 
 ### **npm**
 
-To understand npm, it helps to first talk about node.js. In the paragraph, at the top of this page, I describe javascript as a "front-end language." That is MOSTLY true. 
-
-However, node.js is a runtime environment (don't get caught up on this term) that allows you to use JavaScript essentially as a back-end, server-side language. Whereas JavaScript normally just runs in your browser and has access to your webpages, you can now use node.js to run it directly on your machine and use it access your files, automate tasks, etc. With node.js, Javascript essentially can do the type of activities typically managed by php, java, or other back-end languages. 
-
-npm's value is two-fold: 1. It serves as a package manager for node.js (automates the installation, upgrading, and configuring process), and 2. It makes it easy for JavaScript developers to share and reuse code.  
+npm's value is two-fold: 1. It serves as a package manager (automates the installation, upgrading, and configuring process), and 2. It makes it easy for JavaScript developers to share and reuse code.  
 
 These bits of reusable code are called packages or modules, and can easily be downloaded and applied with npm. 
 
