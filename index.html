@@ -10,20 +10,25 @@ permalink: /
 						<h1 style="text-align:center; vertical-align:center; padding-top:12%; font-family: 'Lobster', cursive;">&#x2727; <span class="headingWords">Portfolio</span>  &#10023;</h1>
 					</div>	
 				</div>
-				<div class = "row">
-					<div class = "col-xs-8" style="margin-left:5%; margin-bottom:4%">
-						<p>Portfolio will go here!<br>
-						and here- Updated!<br>
-						and here<br>
-						and here<br>
-						and here<br>
-						and here<br>
-						and here<br>
-						and here<br>
-						and here<br>
-						and here<br>
-						and here<br>
-						</p>
+				<div class = "row" id = "portfolioSection">
+					<div class = "col-xs-10" style="margin-left:5%; margin-bottom:4%">
+						<div class = "row">
+							<!-- Modal HTML embedded directly into document -->
+			 					<button type="button" data-toggle="modal" data-target="#portfolio1" class="portfolioButton"><img src="/portfolio/hangbot.png" class="img portfolioImage">
+								</button>
+			  					<!-- Link to open the modal -->
+			  					<!-- Modal -->
+								<div class="modal fade" id="portfolio1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+								  <div class="modal-dialog modal-lg">
+								    <div class="modal-content">
+								      <img src="/portfolio/hangbot.png" class="img img-responsive modalImage">
+								      <p class = "modalText">Hangman, but with a crasser, crueler opponent. The source code is available on my github, and it has been deployed with Heroku here.</p>
+								    </div>
+								  </div>
+								</div>
+
+
+						</div>
 					</div>
 				</div>
 		</section>
@@ -64,20 +69,41 @@ permalink: /
 		<section id="contact">
 				<div class = "row">
 					<div class = "col" style="text-align:center">
-						<h1 style="text-align:center;margin-top:3%; padding-left:3%; padding-right:3%; padding-top:13%; font-family: 'Lobster', cursive;">&#10023;  <span class="headingWords">Contact Me</span>  &#10023;</h1>
+						<h1 style="text-align:center;margin-top:3%; padding-left:3%; padding-right:3%; padding-top:5%; font-family: 'Lobster', cursive;">&#10023;  <span class="headingWords">Contact Me</span>  &#10023;</h1>
 					</div>	
 				</div>
-				<div class = "row">
-					<div class = "col-xs-8" style="text-align:center;">
-						<p>Form goes here!
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						</p>
-					</div>
-				</div>
+				<div class="row" id="contactMe">
+			        <div class="col-lg-8 col-lg-offset-2">
+			            <form action="https://formspree.io/brookin8+formspree@gmail.com"
+			                method="post" role="form">
+			                <div class="row">
+			                    <div class="form-group col-xs-12 floating-label-form-group">
+			                        <label for="name">Name</label>
+			                        <input class="form-control" type="text" name="name" placeholder="Name">
+			                    </div>
+			                </div>
+			                <div class="row">
+			                    <div class="form-group col-xs-12 floating-label-form-group">
+			                        <label for="email">Email Address</label>
+			                        <input class="form-control" type="email" name="email" placeholder="Email Address">
+			                    </div>
+			                </div>
+			                <div class="row">
+			                    <div class="form-group col-xs-12 floating-label-form-group">
+			                        <label for="message">Message</label>
+			                        <textarea placeholder="Message" class="form-control" rows="5"></textarea>
+			                    </div>
+			                </div>
+			                <br>
+			                <div class="row">
+			                    <div class="form-group col-xs-12">
+			                        <button type="submit" class="btn btn-lg btn-success" id="sendButton">Send</button>
+			                    </div>
+			                </div>
+			                <input type="text" name="_gotcha" style="display:none" />
+			            </form>
+			        </div>
+			    </div>
 				<div class = "row">
 					<div class = "col-xs-12">
 						<h3 style="text-align:center;font-family: 'Lobster', cursive;">Or Find Me Online:</h3>
@@ -88,7 +114,7 @@ permalink: /
 				<div class = "row">
 					<div class = "col-3">
 						<table class="table" style="width:25%; margin:auto;">
-							<tbody>
+							<tbody id="socialMedia">
 								<tr>
 				                    <th style="text-align:center"><a href="https://github.com/brookin8" class="btn-social btn-outline" style="color:#E37E49;"><i class="fa fa-github fa-2x"></i></a>
 				                    </th>
@@ -102,11 +128,6 @@ permalink: /
 					</div>
 				</div>	
 		</section>
-
-	<script
-    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     
 	</body>
 </html>
