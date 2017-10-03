@@ -1,3 +1,7 @@
+html {
+      box-sizing: content-box;
+}
+
 body.container {
       margin-right:0%;
       width:100%;
@@ -121,16 +125,17 @@ body.container {
             width:50%;
           }
           .portfolioImage {
-            width:130%;
+            width:120%;
             margin-right:auto;
           }
 
           .portfolioButton {
             background-color:#ffffff;
             border:none;
-            height:90%;
-            width:90%;
-            margin-bottom:0;
+            height:80%;
+            width:80%;
+            margin-bottom:5%;
+            margin-left:5%;
             padding-left:0;
             padding-right:0;
             padding-bottom:0;
@@ -140,11 +145,14 @@ body.container {
 
            .portfolioButton:hover{
             border:3px solid #616F7F;
-            height:90%;
-            width:90%;
+            height:80%;
+            width:80%;
             margin-bottom:5%;
-            margin-bottom:0;
-            margin-left:0;
+            margin-left:5%;
+            padding-left:0;
+            padding-right:0;
+            padding-bottom:0;
+            padding-top:0;
          
           }
 
