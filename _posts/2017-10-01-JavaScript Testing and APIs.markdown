@@ -4,14 +4,16 @@ title:  "Week 2: JavaScript- JSON, XML HTTP Requests, APIs, and Testing"
 date:   2017-10-01 01:09:27 -0400
 categories: JavaScript, JSON, API, XML, Testing, Mocha, Chai
 ---
+
+
+This week was all about added functionality. 
+
+Although many people now interact with JavaScript through a library, like JQuery or React (more on that in a later post), we went straight JavaScript in our files. We covered the basics, like ensuring a page is fully loaded before 'turning on' your JavaScript functions, assigning 'click' actions to buttons, and pulling and interacting with data from an API. Moving one step beyond this foundation, we also covered not only how to test your JavaScript using a combination of Mocha and Chai, but how to build your JavaScript from day one in a way that enables you to test it more effectively as you go. 
+
 <br>
 
 ## **Tools Covered:** APIs, Mocha, and Chai
 ## **Languages Covered:** JavaScript- Standard, JSON
-
-<br>
-
-This week was all about added functionality. Although many people now interact with JavaScript through a library, like JQuery or React (more on that in a later post), we went straight JavaScript in our files. We covered the basics, like ensuring a page is fully loaded before 'turning on' your JavaScript functions, assigning 'click' actions to buttons, and pulling and interacting with data from an API. Moving one step beyond this foundation, we also covered not only how to test your JavaScript using a combination of Mocha and Chai, but how to build your JavaScript from day one in a way that enables you to test it more effectively as you go. 
 
 <br>
 

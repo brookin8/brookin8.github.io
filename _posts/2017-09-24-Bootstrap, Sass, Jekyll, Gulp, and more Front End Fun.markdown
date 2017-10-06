@@ -4,14 +4,11 @@ title:  "Week 1: Boostrap, Github, Gulp, and more"
 date:   2017-09-24 01:09:27 -0400
 categories: Bootstrap, Github, npm, Gulp, Sass
 ---
-<br>
 
-## **Tools Covered:** Bootstrap, Github, npm, Gulp
-## **Languages Covered:** Sass
 
-<br>
+Before I get into the individual tools, understanding the whole "front-end" vs "back-end" piece early on was crucial for me. 
 
-Before I get into the individual tools, understanding the whole "front-end" vs "back-end" piece early on was crucial for me. Front-End (also called "client-side") consists of everything that is processed *in* your browser. It is more focused on the look and feel of a project, and how the user interacts with the site. 
+Front-End (also called "client-side") consists of everything that is processed *in* your browser. It is more focused on the look and feel of a project, and how the user interacts with the site. 
 
 The 3 main front-end languages are:
 1. HTML (Determines the general framework of your site)
@@ -19,6 +16,11 @@ The 3 main front-end languages are:
 3. JavaScript (Adds interactivity- IE forms, buttons, log-igns - and animation to your site)
 
 I will get more into Back-End later on, but essentially it's "server-side" functionality (a lot of database interaction).
+
+<br>
+
+## **Tools Covered:** Bootstrap, Github, npm, Gulp
+## **Languages Covered:** Sass
 
 <br>
 

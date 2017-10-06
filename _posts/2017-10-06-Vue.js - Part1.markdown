@@ -4,14 +4,16 @@ title:  "Week 3: Vue.js: Part 1"
 date:   2017-10-06 01:09:27 -0400
 categories: Vue.js, Vue
 ---
+
+
+We only did Vue this week, and it broke most of our brains. 
+
+The first interaction with a JavaScript framework seemed almost like an entirely different programming language altogether. However, there is definitely a lot of value to be had in harnassing a framework for the front-end (the other, more popular option being Angular). If used correctly, it has the power to shrink your massive amount of javascript code down to nay but a few lines, and create a more intuitive view of your html page where the functionality can be seen succinctly, and directly linked to the items it acts on. 
+
 <br>
 
 ## **Tools Covered:** Vue.js (Framework)
 ## **Languages Covered:** JavaScript
-
-<br>
-
-We only did Vue this week, and it broke most of our brains. The first interaction with a JavaScript framework seemed almost like an entirely different programming language altogether. However, there is definitely a lot of value to be had in harnassing a framework for the front-end (the other, more popular option being Angular). If used correctly, it has the power to shrink your massive amount of javascript code down to nay but a few lines, and create a more intuitive view of your html page where the functionality can be seen succinctly, and directly linked to the items it acts on. 
 
 <br>
 
