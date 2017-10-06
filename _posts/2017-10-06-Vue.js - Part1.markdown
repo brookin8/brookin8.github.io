@@ -1,0 +1,257 @@
+---
+layout: post
+title:  "Week 3: Vue.js: Part 1"
+date:   2017-10-06 01:09:27 -0400
+categories: Vue.js, Vue
+---
+
+
+<br>
+
+### **Tools Covered:** Vue.js (Framework)
+### **Languages Covered:** JavaScript
+
+<br>
+
+We only did Vue this week, and it broke most of our brains. The first interaction with a JavaScript framework seemed almost like an entirely different programming language altogether. However, there is definitely a lot of value to be had in harnassing a framework for the front-end (the other, more popular option being Angular). If used correctly, it has the power to shrink your massive amount of javascript code down to nay but a few lines, and create a more intuitive view of your html page where the functionality can be seen succinctly, and directly linked to the items it acts on. 
+
+<br>
+
+## __But First, an Overview:__
+
+If you, like me, are unfamiliar with the difference between frameworks, libraries, tools, etc., I found a great article that breaks it down: https://www.sitepoint.com/top-javascript-frameworks-libraries-tools-use/
+
+I will attempt to summarize here.
+<br>
+<br>
+
+#### **Libraries**
+Essentially, a library is a bundle of useful code that gives you shorthand ways of formatting your page or adding functionality. You simply link to a library in your HTML page, and you're able to use it's unique (hopefully also reduced and more effective) syntax. 
+
+Examples: **Bootstrap**, **JQuery**, **React**
+
+<br>
+
+#### **Tools**
+Tools, on the other hand, help you build your project, but aren't actually part of it. If you use a library while building your app, when you look back on your code, it will be written in that library's syntax. It is forever a part of your code. However, after you completely finish building your app and deploy, you could delete all of the tools you used and it wouldn't change a thing. 
+
+Examples: **Gulp**, **Sass**, **npm**
+
+<br>
+
+#### **Frameworks**
+Here, is where it gets tough for me. The only way I can really conceptualize what all goes into a framwork is through gaining experience using one. However, the article did have a particularly good quote: 
+	"A framework is an application skeleton. It requires you to approach software design in a specific way and insert your own logic at certain points."
+
+Basically, it tells you "put this here and in this format." And you have to, or it won't work. As I mentioned earlier, it almost feels like coding in another language, because you can't just throw your variables at the top and your JavaScript functions down at the bottom, link carelessly to global variables, and mix in vanilla JavaScript where you please. You start out with the framework format, and plug in your data and functions where it tells you they have to go.
+
+While this sounds like a pain (and it is at first!), I can already see where the potential benefits would be. Right now it takes way more mental gymnastics to write in a framework, but even so the resulting code is much simpler, cleaner, and easier to follow. Additionally, once you break your brain to think in the way the framework does, you could easily cut your programming time in half depending on what you're trying to accomplish. I would recommend looking through some documentation for the examples below. 
+
+Examples: **AngularJS(1.x and 2.x/4.x)**, **Vue.js**, **Backbone.js**
+
+<br>
+
+## **MVVM**
+It also helps to understand a concept called the 'MVVM' or "Model-View-ViewModel" pattern before jumping into a framework example. MVVM is just a way to approach website or application design that breaks down the user interface conceptually into 3 pieces: 
+<br>
+<br>
+
+  1.**The Model** : Everything coming from the database; independent of the UI
+
+  2.**The View** : The visual representation of data from the model that the user sees and interacts with; the UI
+
+  3.**The ViewModel** : The glue that pieces these two portions together
+<br>
+<br>
+The ViewModel sits in between the Model and the View, takes the data in the model, and makes it able to easily be presented and modified by the view (user). I'll review some other essential MVVM concepts below.
+
+<br>
+
+#### **Data Binding**
+Essential to the idea of the ViewModel is something called "data binding." Elements in the UI, like a div, are bound to properties that the ViewModel exposes, like a css class that is only applied if an event (like clicking) takes place. 
+
+In the example above, you could bind a class (called "active") to an HTML element (a "div"), and give it bright yellow background. Normally, the div has a default orange background. However, when you click on the div, it applies the "active" class and turns the background yellow. 
+
+<br>
+
+#### **Modeling**
+You can use data binding to immediate model a result, too. For example, you could have an input field and bind it to a div box (we'll call the 'display'). You could bind the two, and specify that the display will model whatever is in the input box. So, if you type "Hello!" into the input, the div will display the text "Hello!" below. Nothing in your original JS file (or your "Model") has changed at all. 
+
+<br>
+
+## **Vue.js**
+
+Vue appears to be an up-and-comer in the JavaScript framework world. If I'm being completely honest, as a newbie developer I may rather be learning some of the more popular tools out there (like the aforementioned Angular or React). However, it does at least seem like the popular opinion out there is that Vue is simple, effective, easy to learn, and sure to become more common.
+
+It is focused on the user-interface portion of your website, and essentially helps you dynamically update your page's appearance based on how your user interacts with the website, or what inputs they provide. In other words, Vue.js focuses on manipulating the ViewModel, in a way that is instantly reflected in the View. 
+
+So how to get started with Vue.js? There's a basic structure for your javascript doc (that you absolutely have to follow) that looks something like this: 
+<br>
+<br>
+
+	var menu = new Vue ({ //New instance of Vue
+		
+		el : '#menu', //The element in your HTML document that you bind to
+		
+		data: {
+
+			active: false //Your variables
+
+		},
+
+		methods: { 
+			makeActive: function(item) { //Your functions
+				this.active = item;
+			}
+		}
+
+	});
+
+<br>
+El, Data, and Methods are essentially just (in order) the the HTML element you are acting on, your variables, and your functions. Pretty straightforward. But what in the world is an "instance"?
+
+It works pretty similar to how objects in JavaScript work. The basic concept is that when you create a new instance of Vue, it knows what properties to expect. It knows it needs an element, and may have some variables (data) and some functions (methods). 
+
+When actually applying Vue, however, most of the action happens directly in your HTML doc. 
+
+<br>
+For example: 
+
+	<nav v-bind:class="active"> 
+		<a v-on:click="makeActive('home')" class="home" href="#">Home</a> 
+		<a v-on:click="makeActive('projects')" class="projects" href="#">Projects</a>
+		<a v-on:click="makeActive('services')" class="services" href="#">Services</a>
+		<a v-on:click="makeActive('contact')" class="contact" href="#">Contact</a>
+	</nav> 
+
+<br>
+<br>
+### **Here's a breakdown of the Vue functions used in the example above:**
+<br>
+#### __v-bind__  
+Remember binding in the MVVM that I talked about earlier? In this case, I have a variable in my JS doc under data called active (you can see it in the example above). The nav bar will have a class equal to whatever the current value of "active" is. The value of active never actually changes in my JS doc, BUT it does change in the ViewModel.
+<br>
+<br>
+#### __v-on:click__ 
+This assigns something to happen; in this case it assigns a function defined in methods in our JS doc (see example above). When I click any of the anchor tags, it will execute the 'makeActive()' method, passing it the argument I specified ('home',projects', 'services' and 'contact') - which are the same as the classes of the anchor tag to which each one is aassigned.
+
+In this way, I make the value of my active variable equal to the class of whatever anchor I clicked on. 
+
+This then gives the nav bar a class that has the value of active (again, either 'home', 'projects', 'services', and 'contact') because its class is BOUND to the current value of active.  
+
+And in my css, I have made a special class called out to correspond to these changes:
+
+	nav.home a.home, nav.projects a.project, nav.services a.services, nav.contact a.contact {
+			background color: #fff;
+	}
+	
+So, when I click on an anchor tag, it's background will now be white. Pretty nifty! Very little javascript required.
+
+<br>
+### **Other common, useful vue functions include:**
+<br>
+#### **v-if** (And v-else-if, v-else) 
+This was the easisest to grasp for me, because it works exactly like a normal "if statment" in JavaScript. You can use this in an element to have it display only IF a certain condition is true. 
+
+Using the example above:
+
+	<div>
+		<p v-if="active">Now displaying!</p>
+		<p v-else>Please click a menu item</p>
+	</div>
+
+First, note that the default value I gave to active when I declared in my JS doc under data is **false**.
+
+What this says is that IF active has a value *other than false*, THEN display the first paragraph with the text "Now displaying!". Otherwise (ELSE / if active has a value of false), THEN display the paragraph with the text "Please click a menu item". Because my default value is false, it will initially show "Please click a menu item."
+
+Vue will only show one of these two paragraphs at a time, and switch them in and out seamlessly. 
+
+<br>
+#### **v-model** 
+This is technically still part of the binding process. You sneak this guy into an element for which you would like to: 1. allow the user to manipulate/interact with, 2. store the results of this interaction, 3. display the results somewhere on the page. For example:
+
+		
+	HTML:
+		<div>
+			<input type="text" v-model="text_content">
+		</div>
+	
+		<p>{{ text_content }}</p>
+
+	JS:
+		var demo = new Vue({
+
+			el: '#main',
+
+		data: {
+			text_content: 'Click me to edit my text!'
+		},
+
+		methods: {
+
+		}
+
+In this example, I have snagged whatever the user types into your input field, and stored it in a variable called text_content. I also created a variable called text_content in my data field in my vue instance, so that vue can recognize and act on this variable. It's default text will be, "Click me to edit my text!"
+
+I then use the curly brackets {{ }} with the variable who's value I want to display (text_content) in the center. As the user types words into the input field, it will be storing these words in the current value of text_content, and displaying it in the paragraph in real time. The value of text_content in my javascript file never changes. 
+
+<br>
+#### __v-for__ 
+This one, like v-if, is very similar to its JavaScript cousin. V-for is typically used to dynamically render lists or tables, by creating a for loop and iterating through the data you tell it to. 
+
+	HTML: 
+
+		<ul>	
+			<li v-for="service in services">
+				{{ service.name }} {{ service.price}}
+			</li>
+		</ul>
+
+	JS: 
+		var menu = new Vue ({
+	
+		el : '#main',
+
+		data: {
+
+			services: [
+			{
+				name: 'Web Development', 
+				price: 300.00, 
+			}, 
+			{
+				name: 'Design', 
+				price: 400.00, 
+			}, 
+			{
+				name: 'Integration', 
+				price: 250.00, 
+			}, 
+			{
+				name: 'Training', 
+				price: 220.00, 
+			}
+			]
+		},
+
+		methods: {
+
+		}  
+	}
+
+In this example, we have a variable in our data that holds an array of services. Each service has a name and a price. With v-for, we are telling it that for each service in services, to loop through, create a list item, and within that list item to print out (or *model*) the services name and price.  
+
+<br>
+
+## Big Takeaway:
+At this point, it seems like it really helps to have a solid grasp of plain JavaScript before jumping into libraries and frameworks. Libraries are pretty easy to plug in and get going. Frameworks, on the other hand, are still kind of scary for me.  
+
+However, while there is a steeper learning curve with Frameworks, I can already see the payoff is potentially much greater. One well-placed, thoughtful line of Vue can potentially do the equivalent of dozens of line pure JavaScript. 
+
+But you do have to be *much* more thoughtful.  
+
+
+
+
+
+
