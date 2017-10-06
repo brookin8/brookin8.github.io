@@ -6,7 +6,6 @@ categories: JavaScript, JSON, API, XML, Testing, Mocha, Chai
 ---
 
 
-<br>
 
 ### **Tools Covered:** APIs, Mocha, and Chai
 ### **Languages Covered:** JavaScript- Standard, JSON

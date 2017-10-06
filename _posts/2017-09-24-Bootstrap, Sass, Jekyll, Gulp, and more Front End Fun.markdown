@@ -6,7 +6,6 @@ categories: Bootstrap, Github, npm, Gulp, Sass
 ---
 
 
-<br>
 
 ### **Tools Covered:** Bootstrap, Github, npm, Gulp
 ### **Languages Covered:** Sass
