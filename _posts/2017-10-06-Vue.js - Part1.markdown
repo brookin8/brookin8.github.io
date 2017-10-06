@@ -7,8 +7,8 @@ categories: Vue.js, Vue
 
 
 
-### **Tools Covered:** Vue.js (Framework)
-### **Languages Covered:** JavaScript
+## **Tools Covered:** Vue.js (Framework)
+## **Languages Covered:** JavaScript
 
 <br>
 
