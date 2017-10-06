@@ -4,8 +4,7 @@ title:  "Week 3: Vue.js: Part 1"
 date:   2017-10-06 01:09:27 -0400
 categories: Vue.js, Vue
 ---
-
-
+<br>
 
 ## **Tools Covered:** Vue.js (Framework)
 ## **Languages Covered:** JavaScript

@@ -4,8 +4,7 @@ title:  "Week 2: JavaScript- JSON, XML HTTP Requests, APIs, and Testing"
 date:   2017-10-01 01:09:27 -0400
 categories: JavaScript, JSON, API, XML, Testing, Mocha, Chai
 ---
-
-
+<br>
 
 ## **Tools Covered:** APIs, Mocha, and Chai
 ## **Languages Covered:** JavaScript- Standard, JSON

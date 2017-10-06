@@ -4,8 +4,7 @@ title:  "Week 1: Boostrap, Github, Gulp, and more"
 date:   2017-09-24 01:09:27 -0400
 categories: Bootstrap, Github, npm, Gulp, Sass
 ---
-
-
+<br>
 
 ## **Tools Covered:** Bootstrap, Github, npm, Gulp
 ## **Languages Covered:** Sass
