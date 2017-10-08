@@ -105,7 +105,7 @@ So how to get started with Vue.js? There's a basic structure for your javascript
 <br>
 El, Data, and Methods are essentially just (in order) the the HTML element you are acting on, your variables, and your functions. Pretty straightforward. But what in the world is an "instance"?
 
-It works pretty similar to how objects in JavaScript work. The basic concept is that when you create a new instance of Vue, it knows what properties to expect. It knows it needs an element, and may have some variables (data) and some functions (methods). 
+It works pretty similar to how classes in JavaScript work. The basic concept is that when you create a new instance of Vue, it knows what properties to expect. It knows it needs an element, and may have some variables (data) and some functions (methods). 
 
 When actually applying Vue, however, most of the action happens directly in your HTML doc. 
 
