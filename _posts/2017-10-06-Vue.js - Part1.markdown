@@ -12,11 +12,6 @@ The first interaction with a JavaScript framework seemed almost like an entirely
 
 <br>
 
-## **Tools Covered:** Vue.js (Framework)
-## **Languages Covered:** JavaScript
-
-<br>
-
 ## __But First, an Overview:__
 
 If you, like me, are unfamiliar with the difference between frameworks, libraries, tools, etc., I found a great article that breaks it down: https://www.sitepoint.com/top-javascript-frameworks-libraries-tools-use/

@@ -11,20 +11,18 @@ Before I get into the individual tools, understanding the whole "front-end" vs "
 Front-End (also called "client-side") consists of everything that is processed *in* your browser. It is more focused on the look and feel of a project, and how the user interacts with the site. 
 
 The 3 main front-end languages are:
-1. HTML (Determines the general framework of your site)
-2. CSS (Determines the styling of your site)
-3. JavaScript (Adds interactivity- IE forms, buttons, log-igns - and animation to your site)
+  
+  1.**HTML** (Determines the general framework of your site)
+  
+  2.**CSS** (Determines the styling of your site)
+  
+  3.**JavaScript** (Adds interactivity- IE forms, buttons, log-igns - and animation to your site)
 
 I will get more into Back-End later on, but essentially it's "server-side" functionality (a lot of database interaction).
 
 <br>
 
-## **Tools Covered:** Bootstrap, Github, npm, Gulp
-## **Languages Covered:** Sass
-
-<br>
-
-#### **Bootstrap**
+### **Bootstrap**
 
 Ok, Bootstrap is what inspired the mild rant in my intro. Boostrap was very intimidating to me for a long time mainly because I couldn't wrap my mind around exactly what it was. Once I finally understood, I was really frusterated. 
 
@@ -45,15 +43,17 @@ Note- you can either download the Bootstrap CSS doc so that it lives in your rep
     link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"
 
 <br>
-#### **Github**
+### **Github**
 
 Again, so many people use and love github, and yet for many of us it can feel like we've run into some gatekeeping.
 
 I honestly believe that is not the intention of anyone involved, yet I had the hardest time finding a simple explanation of the purpose and value of github.
 
 It comes down to gaining a solid understanding of 2 things:
-1. Web hosting services
-2. Git
+
+  **1.** Web hosting services
+
+  **2.** Git
 
 Once you've delved into version control and Git, you begin to understand that at the core of everything is the concept of having what's called a "central repository." Basically, many different people can work on, edit, and save content loaded into one storage location. It helps for me to think of it as a Sharepoint site document. There is a master version of the document that you will eventually submit, or want to be the referenced version of something. You have to check the document out, make whatever changes you want, and then submit that version for review by the site admin. If they approve, your changes will ne incorporated into the master version of that document. 
 
@@ -102,15 +102,23 @@ You download gulp using "npm install gulp" in your command line (Look up the act
 You then add a gulpfile.js (js for javascript) to your directory, and voila. 
 
 Within gulpfile.js, you define the gulp tasks you would like to do using gulp.task(task_name, function (){}), and any variables they may require. Often, the gulp task you are looking for is easily google-able and downloadble using npm. 
+<br>
+<br>
 
-Commonly gulp-ed tasks include:
-  * Translating multiple Sass documents into one, unified CSS document
-  * Compressing new/modified images
-  * "Minifying" CSS & JavaScript files (meaning, removing all of the blank space to reduce the file size)
+**Commonly gulp-ed tasks include:**
+  
+*Translating multiple Sass documents into one, unified CSS document
+  
+*Compressing new/modified images
+  
+*"Minifying" CSS & JavaScript files (meaning, removing all of the blank space to reduce the file size)
 
-Or my favorite:
-  * Auto-refreshing your browser window when you make a change to your HTML, CSS, or JavaScript files
+**Or my favorite:**
+  
+  *Auto-refreshing your browser window when you make a change to your HTML, CSS, or JavaScript files
 
+
+<br>
 For example, to translate Sass documents into CSS, you might google "gulp Sass into CSS".
 
 You would then find that you need to "npm install gulp --sass" in your command line. 
