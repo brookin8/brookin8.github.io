@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Week 4: Vue.js: Part 2 (Components, Filters, and Computed)"
+title:  "Week 4: Vue.js: Part 2 (Components!)"
 date:   2017-10-11 01:09:27 -0400
 categories: Vue.js, Vue, Components, Frameworks
 ---
@@ -13,7 +13,7 @@ Walking through an example of using a component was immensely helpful, and has b
 
 <br>
 
-## **Components: What are they?**
+## **What are Components?**
 We have been continuously stressing one goal in particular throughout our web development journey thus far: clean, intuitive, minimal code. 
 
 In effort to achieve this goal, we use components. 
@@ -59,22 +59,20 @@ For me, it makes sense to think of a component as a class. When you call it in y
 #### To break it down:
 
 In the JS Doc:
-* 'Greeting' : Name of the component
-* 'Template' : Defines the structure that will be applied to the HTML element that the component is applied to. 
-* 'Props' : These are the data elements that are used in the component, and will be defined in the vue instance. You can call them whatever you want, but the value has to be consistent throughout the component. It will be bound to the proper data element when you apply the component in your HTML doc. 
+* **'Greeting'** : Name of the component
+* **'Template'** : Defines the structure that will be applied to the HTML element that the component is applied to. 
+* **'Props'** : These are the data elements that are used in the component, and will be defined in the vue instance. You can call them whatever you want, but the value has to be consistent throughout the component. It will be bound to the proper data element when you apply the component in your HTML doc. 
 
 In the HTML Doc:
-* 'is=greeting' : To declare that this div is going to be structured following the greeting template. We could also have done away with the div tags altogether and formatted it as follows:
+* **'is=greeting'** : To declare that this div is going to be structured following the greeting template. We could also have done away with the div tags altogether and formatted it as follows:
 	<greeting v-bind:message="message"></greeting>
-* 'v-bind:message = "message"' : This is where we're binding the message prop in the component (the first message) to the message data element in the vue instance (the second message).
+* **'v-bind:message = "message"'** : This is where we're binding the message prop in the component (the first message) to the message data element in the vue instance (the second message).
 
-<br>
 <br>
 
 ## **Global Components**
 The component in the example above is what's called a global component. It's declared on its own, outside of a vue instance, and can be used across many vue instances. It can even be used across other applications, and within other components. 
 
-<br>
 <br>
 
 ## **Local Components**
@@ -101,7 +99,7 @@ Now we can use greeting in our vue instance!
 
 The more likely use of local components, however, is to build them in their own document (with a .vue suffix) and import them into your main.js. 
 
-### Here's an example of a vue.js doc: 
+### Here's an example of a vue doc (called 'card.vue'): 
 
 	<template>
 	<div class="card" 
@@ -132,14 +130,15 @@ The more likely use of local components, however, is to build them in their own 
 	</style>
 
 ### To break it down:
+<br>
 
-#### Template Section
+#### **Template Section**:
 The code within the template section is defining the HTML structure and content that will be executed when we use the card component. 
 
-#### Script Section
+#### **Script Section**:
 'export default' is doing exactly what it sounds like it is -  we are packaging everything that we defined in template, and all of the props and methods below into a nice package (or Component), and giving the package the name of 'card'.
 
-### Style Section
+#### **Style Section**:
 This section holds the related css styling cold for the component. 
 
 Not so bad, right? Well here's when it gets hairy. Try using 'require' (ES5) or 'import' (ES6) in your main.js document, and your console will loose it's mind. This functions only work on the BACKEND, and will not work when called within a main.js page that links directly to the index.html page you are rendering. 
@@ -147,25 +146,23 @@ Not so bad, right? Well here's when it gets hairy. Try using 'require' (ES5) or 
 How do we get past this seemingly impossible hurdle?
 
 <br>
-<br>
 
 ## **The Vue CLI**
 
-Yes! There is already an amazingly user-friendly bundle out there that fixes all of this for you. 
+Yes! There is already an amazingly user-friendly bundle out there that fixes all of this for you. It's called Vue CLI (or Vue Command Line Interface).
 
-There are downloadable tools - most notably Browserify and Webpack - built specifically to allow you to use 'require' or 'import' on the front end. 
+Now, there are other downloadable tools - most notably Browserify and Webpack - built specifically to allow you to use 'require' or 'import' on the front end. 
 
-However, what Vue CLI does for you is to package these tools up nicely into pre-built templates made specifically for interacting with the Vue framework. Muah! (Kiss fingers)
+However, what Vue CLI does for you is to package these tools up nicely into pre-built templates made specifically for interacting with the Vue framework. Muah! 
 
-Simply download the Vue CLI, pick your template of choice, get and you're off and running (this is all outlined in their easy-to-follow instructions). We built a seperate components folder within the pre-built src folder to hold vue documents that we would then import into the existing App.vue doc (which is then, finally, imported into your main.js). 
+Simply download the Vue CLI, pick your template of choice (browserify or webpack), initiate the built-in http server (so that you can instantly see your changes reflected on your localhost) and you're off and running. We also built a seperate components folder within the pre-built src folder to hold vue documents that we would then import into the existing App.vue doc, which is then, finally, imported into your main.js. 
 
-You never actually code in your main.js. It is only there for final rendering. Instead, you code directly in the App.Vue file, or in your own vue files (linked ultimately to the App.Vue file). 
+In fact, you never actually code in your main.js. It is only there for final rendering. Instead, you code directly in the App.Vue file, or in your own vue files - which are ultimately linked to the App.Vue file. 
 
 All of the crazy webpack-ing, browserify-ing, babel-ing just goes on automatically in the background, with instant hot-rendering on your local server. 
 
 Pretty cool. 
 
-<br>
 <br>
 
 ## **And One Other Thing I Learned This Week that Almost Made Me A Crazy Person**
