@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Week 4: Vue.js: Part 2 (Components!)"
+title:  "Week 4: Vue.js: Part 2 (Components and Vue CLI)"
 date:   2017-10-11 01:09:27 -0400
-categories: Vue.js, Vue, Components, Frameworks
+categories: Vue.js, Vue, Components, Frameworks, Vue CLI
 ---
 
 Like with most things, the more you get into Vue, the more approachable it becomes.

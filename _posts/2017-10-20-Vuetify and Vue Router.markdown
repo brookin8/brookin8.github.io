@@ -1,229 +1,121 @@
 ---
 layout: post
-title:  "Week 5: Vue.js: Part 3 (Vue Router, EventBus)"
+title:  "Week 5: Vue.js: Part 3 (Vue Router)"
 date:   2017-10-22 01:09:27 -0400
-categories: Vue.js, Vue, Router, Frameworks, Events, EventBus, Single Page 
+categories: Vue.js, Vue, Router, Frameworks, Events, Single Page 
 ---
 
-Like with most things, the more you get into Vue, the more approachable it becomes.
+We broke into smaller groups this week, and mine worked through a project the previous bootcamp had built. We were charged with translating the existing AngularJS frontend into Vue, while utilizing their existing backend. 
 
-The Vue documentation, while very clear and well-littered with helpful pictures and code-snippets, is chock full of jargon that is mind-boggling to those of us coming in with zero framework experience. The concept of a "component", for example, is something that is referenced frequently, yet most of us had no idea what this was (rendering the surrounding instructions useless). 
+Pretty soon, we decided to completely scrap all of the existing Angular, and start fresh with Vue.
 
-Walking through an example of using a component was immensely helpful, and has been a big step towards de-coding the rest of the Vue documentation.  
+Fair warning- all of the learning shared here is self-taught this week (meaning it may not be 100% there). However, digging in and pushing our abilties to their limits led to some pretty cool discoveries.
 
 <br>
 
-## **What are Components?**
-We have been continuously stressing one goal in particular throughout our web development journey thus far: clean, intuitive, minimal code. 
+## **Vue Routers**
 
-In effort to achieve this goal, we use components. 
+As a background, it helps to understand the concept of a **Single Page Application** (SPA). 
 
-There's a secondary goal as well. In the real world, many companies will have a library of components. The library will include components for things like a drop-down menu, a header, a title, etc. The UX Design team will use these components when creating pages of the site, which means that all of the different pages will have a similar look and feel. In this way, components also ensure cohesion. 
+Let's use an example:
 
-So what is it?
+Say you want to build a website that starts off with an intro page about yourself. You then want to also include a blog, with a main blog homepage and pages for each post. 
 
-A component is nothing more than a Vue template you can reuse over and over again. Typically, it's a combination of html tags, innerHTMl content, functions and possibly styling. 
+The basic way you would approach this problem is to start with an index.html page to hold your intro. You might then create a blog.html to host your blog homepage, and a post1.html, post2.html, etc. for each post. Finally, you create a navigation bar that links you between all of these different pages. 
 
-For me, it makes sense to think of a component as a class. When you call it in your various Vue instances, you're basically creating an unique object of that class. It knows what properties to expect, and when you call it in an instance, you pass element-specific values to those properties.  
+An SPA would create index.html. And that's it. 
 
-### Here's an example: 
+At least as far as html goes. With an SPA, you have only one page that is dynamically re-rendered and updated as the user interacts with it.
 
-#### JS Doc:
+If this sounds complicated, you just have to think back to components (from the previous post). You can essentially store each different view of the page that the user might need in it's own component, and call it as needed. 
 
-	Vue.component('greeting', {
-	    template : '<h1>{{message}}</h1>',
-	    props : ['message']
-	});
+The easiest way to accomplish this is with the [official vue-router library](https://github.com/vuejs/vue-router). To get started, you simply npm install it, and use it with Vue CLI.
 
-	var vm = new Vue({
- 		el : '#app',
- 		data : {
- 			message : 'Hello!'
- 		} 
-	});
+Before I start, here's a resource I found immensely helpful: [Scotch Tutorial](https://scotch.io/tutorials/getting-started-with-vue-router).
 
-#### HTML Doc:
+When you create a new template in Vue CLI, you have the option to include Vue Router. Select Yes. This will automatically create a src/router/index.js file for you. In this file, it will also have already imported Vue and Router from the appropriate files. 
 
-	<html>
-		<head>
-		</head
-		<body>
+Underneath this, you simply import the components you will be rendering on the page as different views. You then call **Vue.use(Router)** , and export default a new Router. It's within this portion that you define your different routes.
 
-			<div id="app">
-				<div is="greeting" v-bind:message="message"></div>
-			</div>
+### Here's an example (src/router/index.js): 
 
-		</body>
-	</html>
+	import Vue from 'vue'
+	import Router from 'vue-router'
+	import Home from 'src/components/Home'
+	import Blog from 'src/components/Blog'
+
+	Vue.use(Router)
+
+	export default new Router({
+	  routes: [
+	    {
+	      path: '/',
+	      name: 'Home',
+	      component: Home
+	    },
+	    {
+	      path: '/blog',
+	      name: 'Blog',
+	      component: Blog
+	    }
+	  ]
+	})
 
 #### To break it down:
 
-In the JS Doc:
-* **'Greeting'** : Name of the component
-* **'Template'** : Defines the structure that will be applied to the HTML element that the component is applied to. 
-* **'Props'** : These are the data elements that are used in the component, and will be defined in the vue instance. You can call them whatever you want, but the value has to be consistent throughout the component. It will be bound to the proper data element when you apply the component in your HTML doc. 
+Here, we are creating a router view for both a main homepage, and a blog homepage. 
 
-In the HTML Doc:
-* **'is=greeting'** : To declare that this div is going to be structured following the greeting template. We could also have done away with the div tags altogether and formatted it as follows:
-	<greeting v-bind:message="message"></greeting>
-* **'v-bind:message = "message"'** : This is where we're binding the message prop in the component (the first message) to the message data element in the vue instance (the second message).
+* **'path'** : url path where the route will be accessed
+* **'name'** : the name of the route
+* **'component'** : the component being routed to
 
 <br>
 
-## **Global Components**
-The component in the example above is what's called a global component. It's declared on its own, outside of a vue instance, and can be used across many vue instances. It can even be used across other applications, and within other components. 
+Next, in your src/main.js, under where you import App.Vue, import Vue Router. In your Vue Instance, include 'router'.
+
+### Example (src/main.js): 
+
+	import Vue from 'vue'
+	import App from './App'
+	import router from './router'
 
 <br>
 
-## **Local Components**
-A local component, on the other hand, can only be used wherever it is registered. You could store it in a variable, and then access that variable within the "components" attribute in a vue instance. 
+Finally, in src/App.vue, you will call both router-links and router-view in the template: 
 
-### Using the example above:
-
-	var greeting = {
-	    template : '<h1>{{message}}</h1>',
-	    props : ['message']
-	};
-
-	var vm = new Vue({
- 		el : '#app',
- 		data : {
- 			message : 'Hello!'
- 		},
- 		components : {
- 			'greeting' : greeting
- 		}
-	});
-
-Now we can use greeting in our vue instance!
-
-The more likely use of local components, however, is to build them in their own document (with a .vue suffix) and import them into your main.js. 
-
-### Here's an example of a vue doc (called 'card.vue'): 
+### Example (src/App.vue): 
 
 	<template>
-	<div class="card" 
-		v-bind:class="cardNum"
-		v-on:click ="reportClick(cardNum)"></div>
+  		<div id="app">
+		    <router-link :to="/">Home</router-link>
+		    <router-link to="/blog">Blog</router-link>
+		    <router-view></router-view>
+  		</div>
 	</template>
 
-	<script>
+#### To break it down:
 
-	export default {
-
-		name : 'card', 
-		props : [ 'cardNum'],
-		methods : {
-			reportClick : function(cardNum) {
-			this.$emit('cardClicked', cardNum);
-
-			}
-		}
-	}
-
-	</script>
-
-	<style>
-	.card {
-		margin : 5px;
-	}
-	</style>
-
-### To break it down:
-<br>
-
-#### **Template Section**:
-The code within the template section is defining the HTML structure and content that will be executed when we use the card component. 
-
-#### **Script Section**:
-'export default' is doing exactly what it sounds like it is -  we are packaging everything that we defined in template, and all of the props and methods below into a nice package (or Component), and giving the package the name of 'card'.
-
-#### **Style Section**:
-This section holds the related css styling cold for the component. 
-
-Not so bad, right? Well here's when it gets hairy. Try using 'require' (ES5) or 'import' (ES6) in your main.js document, and your console will loose it's mind. This functions only work on the BACKEND, and will not work when called within a main.js page that links directly to the index.html page you are rendering. 
-
-How do we get past this seemingly impossible hurdle?
+* **'router-link'** : Links you can click on to render the different routes you created
+* **'router-view'** : Placeholder where each different route gets rendered
 
 <br>
 
-## **The Vue CLI**
+Now, as you render the page it will initially go to whatever you define your homepage to be. To navigate to your blog, you simply click its router-link, and the page will dynamically re-render and show your blog page without needing to be refreshed or directed to a different HTML doc. 
 
-Yes! There is already an amazingly user-friendly bundle out there that fixes all of this for you. It's called Vue CLI (or Vue Command Line Interface).
-
-Now, there are other downloadable tools - most notably Browserify and Webpack - built specifically to allow you to use 'require' or 'import' on the front end. 
-
-However, what Vue CLI does for you is to package these tools up nicely into pre-built templates made specifically for interacting with the Vue framework. Muah! 
-
-Simply download the Vue CLI, pick your template of choice (browserify or webpack), initiate the built-in http server (so that you can instantly see your changes reflected on your localhost) and you're off and running. We also built a seperate components folder within the pre-built src folder to hold vue documents that we would then import into the existing App.vue doc, which is then, finally, imported into your main.js. 
-
-In fact, you never actually code in your main.js. It is only there for final rendering. Instead, you code directly in the App.Vue file, or in your own vue files - which are ultimately linked to the App.Vue file. 
-
-All of the crazy webpack-ing, browserify-ing, babel-ing just goes on automatically in the background, with instant hot-rendering on your local server. 
-
-Pretty cool. 
-
+Magic! 
 <br>
-
-## **And One Other Thing I Learned This Week that Almost Made Me A Crazy Person**
-
-Scope! Scope almost killed my projects a few times this week. 
-
-You'll notice in Vue code that your page is riddled with the syntax "this.". Keep in mind that the deeper you go into your code, the value of 'this' may change.
-
-Specifically, I'm referring to nested functions. If you're doing a function within a function (and not declaring the nestd function elsewhere seperately), you probably want to be wary of using 'this.'.
-
-Instead, it's a good idea to save the value of this.whateverYouWant when you know it's equal to the correct value you want by placing it into a variable. It's like freezing it in time.
-
-You are then safe to reference this variable in nested within nested within nested functions (as long as you don't declare another variable with the same name... but why would you do that to yourself?!).
-
-For example: 
-
-### In the Data Section: 
-
-cards: [
-			{
-				number: 0, 
-				active: false,
-		
-			}, 
-			{
-				number: 1, 
-				active: false
-		]	
-
-
-
-### In the Methods Section: 
-	
-	checkForMatch : function() {
-				
-		var cards = this.cards; 
-
-			setTimeout(function() { 								
-				cards.splice(card1Num,1, {
-					'number' : card1Num,
-					'active' : false
-				});						
-				cards.splice(card2Num,1, {
-					'number' : card2Num,
-					'active' : false
-				});
-			}, 1000);
-	}
-
-### The Break Down: 
-
-What we have in the example above is a method called 'checkForMatch'. When we first jump into the code of that method, the keyword 'this' refers to the vue component as a whole. However, as we move into the inner setTimeout function, 'this' will refer to the method itself (I believe I'm right here... but it's not the component anymore at least). Therefore, we 'freeze' the 'this.cards' value we want when we know it's right by storing it in the variable 'cards'. Now, the value of 'cards' will remain the same even as we go deeper and deeper into nested functions.
-
-Scope in JavaScript is mind-boggling. But baby steps! 
 
 ## Big Takeaway:
-I think right now that frameworks still seem like a LOT of mental work for not enough payoff. HOWEVER, talking to a few of my classmates who have real-world experience on the front-end of things, it sounds like it makes a lot of sense for robust projects. They described using large pre-built component libraries to pull in different pieces of a site (IE a header, drop-down menu, footer, image, etc.). 
+In this journey, it sometimes seems like you learn rules only to figure out how to break them. 
+Everyone knows: 'When in doubt, google.'
 
-With that perspective, components would allow you to have consistent styling and cohesion across all of your pages, regardless of which developers work on them. It also would save all of those developers tons of time and code by being able to reuse all of these pre-packaged component bundles. 
+But do you know what might be even more important?
 
-Being able to connect this piece to a real-world example is often key in grounding new knowledge. 
+When NOT in doubt, google. Or figure out a new thing. 
+
+The realms of what's possible in coding are ever-expanding, and you'll miss out on some really cool stuff if you box yourself in. 
+
+
 
 
 
