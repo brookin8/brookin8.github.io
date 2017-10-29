@@ -13,7 +13,7 @@ Fair warning- all of the learning shared here is self-taught this week (meaning 
 
 <br>
 
-## **Vue Routers**
+## **Vue Router**
 
 As a background, it helps to understand the concept of a **Single Page Application** (SPA). 
 
