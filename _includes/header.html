@@ -49,13 +49,24 @@ a.blogLinkFormat:hover {
       text-decoration:underline;
     }
 
-.nav.navbar-nav.navbar-right a {
+a.nav.nav-item.nav-link {
     color:#ffffff;
     font-family: 'Righteous', cursive;
     font-size:120%;
     }
 
-.nav.navbar-nav.navbar-right a:hover {
+.navbar-default .navbar-nav>.active>a {
+  color:#E37E49;
+  background-color:#92CECC;
+}
+
+.navbar-default .navbar-nav>.active>a:hover {
+  color:#E37E49;
+  background-color:#92CECC;
+}
+
+
+a.nav.nav-item.nav-link:hover {
     color:#E37E49;
     }
 
@@ -159,6 +170,7 @@ a.blogLinkFormat:hover {
 
           .portfolioImage {
             width:100%;
+            border-radius:5px;
           }
 
           .portfolioButton {
@@ -172,6 +184,8 @@ a.blogLinkFormat:hover {
             padding-right:0;
             padding-bottom:0;
             padding-top:0;
+            border-radius:5px;
+
          
           }
 
@@ -185,6 +199,7 @@ a.blogLinkFormat:hover {
             padding-right:0;
             padding-bottom:0;
             padding-top:0;
+            border-radius:5px;
          
           }
 
@@ -251,6 +266,7 @@ a.blogLinkFormat:hover {
             margin-left:auto;
             margin-right:auto;
             object-fit: cover;
+            border-radius:5px;
 
           }
 
@@ -262,6 +278,7 @@ a.blogLinkFormat:hover {
             margin-left:7%;
             margin-bottom:6%;
             padding-left:2px;
+            border-radius:5px;
 
           }
 
@@ -272,7 +289,8 @@ a.blogLinkFormat:hover {
             margin-left:7%;
             margin-bottom:6%;
             padding-left:2px;
- 
+            border-radius:5px;
+
           }
    }
     </style>
@@ -285,10 +303,10 @@ a.blogLinkFormat:hover {
     <title>{{ page.title }}</title>
 </head>
     
-<body class="container" style="width:100%">
+<body data-spy="scroll" data-target="#desktopMenu" data-offset="70" style="position:relative;">
 
 <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top" style="background-color:#92CECC;" id="desktopMenu">
+    <nav class="navbar navbar-default navbar-light navbar-fixed-top" style="background-color:#92CECC;" id="desktopMenu" role="navigation">
         <!--<div class="container">-->
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -306,25 +324,24 @@ a.blogLinkFormat:hover {
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="/#portfolio">Portfolio</a>
+                        <a class="nav nav-item nav-link" href="#portfolio">Portfolio</a>
                     </li>
                     <li>
-                        <a href="/#about">About</a>
+                        <a class="nav nav-item nav-link" href="#about">About</a>
                     </li>
                     <li>
-                        <a href="/#contact">Contact</a>
+                        <a class="nav nav-item nav-link" href="#contact">Contact</a>
                     </li>
                     <li>
-                        <a href="/resume">Resume</a>
+                        <a class="nav nav-item nav-link" href="/resume">Resume</a>
                     </li>
                     <li>
-                        <a href="/blog">Blog</a>
+                        <a class="nav nav-item nav-link" href="/blog">Blog</a>
                     </li>
                 </ul>
             </div>
 
     </nav>
-    
 
   
 
