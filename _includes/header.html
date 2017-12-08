@@ -137,7 +137,23 @@ a.nav.nav-item.nav-link:hover {
       color:#666666;
     }
 
+      .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
+            right: 0;  //or you can increase this
+          }
 
+          .carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
+            left: 0; //or you can increase this
+          }
+
+          .carousel-control.left {
+            background-image:none !important;
+            color:#000;
+          }
+
+          .carousel-control.right {
+            background-image:none !important;
+            color:#000;
+          }
 
 
 @media only screen and (max-width: 736px) {
@@ -187,6 +203,10 @@ a.nav.nav-item.nav-link:hover {
           .portfolioImage {
             width:100%;
             border-radius:5px;
+            height:285px;
+            margin-left:auto;
+            margin-right:auto;
+            object-fit: cover;
           }
 
           .portfolioButton {
@@ -251,12 +271,12 @@ a.nav.nav-item.nav-link:hover {
             padding-right:auto;
           }
 
-          .carouselwrapper{
+        /*  .carouselwrapper{
               height:250px;
               width:350px;
               margin-left:20px;
               margin-bottom:20px;
-          }
+          }*/
 
           .carouselimage {
             height:250px;
@@ -265,9 +285,55 @@ a.nav.nav-item.nav-link:hover {
           }
 
 
+          #myCarousel {
+            width:85% !important;
+          }
+
         }
 
-@media only screen and (min-width: 736px) {
+@media only screen and (max-width: 1025px) and (min-width:737px){
+
+        .portfolioImage {
+            width:450px;
+            border-radius:5px;
+            height:400px;
+            margin-left:auto;
+            margin-right:auto;
+            object-fit: cover;
+          }
+
+          .portfolioButton {
+            background-color:#ffffff;
+            border:none;
+            height:405px;
+            width:445px;
+            margin-bottom:5%;
+           /* margin-left:7%;*/
+            padding-left:0;
+            padding-right:0;
+            padding-bottom:0;
+            padding-top:0;
+            border-radius:5px;
+         
+          }
+
+           .portfolioButton:hover{
+            border:3px solid #616F7F;
+            height:405px;
+            width:445px;
+            margin-bottom:5%;
+            /*margin-left:7%;*/
+            padding-left:0;
+            padding-right:0;
+            padding-bottom:0;
+            padding-top:0;
+            border-radius:5px;
+         
+          }
+
+}
+
+@media only screen and (min-width: 1026px) {
 
           h1 {
             font-size:300%;
@@ -318,8 +384,8 @@ a.nav.nav-item.nav-link:hover {
             padding-right:5%;
           }
           .portfolioImage {
-            width:450px;
-            height:435px;
+            width:595px;
+            height:555px;
             margin-left:auto;
             margin-right:auto;
             object-fit: cover;
@@ -331,11 +397,43 @@ a.nav.nav-item.nav-link:hover {
             width:1000px;
           }*/
 
+        /*  .carousel-inner {
+            padding-right:10%;
+            padding-left:10%;
+          }
+*/
           .portfolioButton {
+            background-color:transparent;
+            border:none;
+            height:560px;
+            width:600px;
+            /*margin-left:10%;
+            margin-right:50px;*/
+            margin-bottom:6%;
+            padding-left:2px;
+            border-radius:5px;
+            box-shadow: 2px 4px 5px 2px rgba(0, 0, 0, 0), 0 4px 11px 0 rgba(0, 0, 0, 0.19);
+
+          }
+
+          .portfolioButton:hover{
+            border:3px solid #E8E8E8;
+            height:560px;
+            width:600px;
+           /* margin-left:10%;*/
+           /* margin-right:10%;*/
+            margin-bottom:6%;
+            padding-left:2px;
+            border-radius:5px;
+            box-shadow: 2px 4px 5px 2px rgba(0, 0, 0, 0), 0 4px 11px 0 rgba(0, 0, 0, 0.19);
+
+          }
+
+          .portfolioButton1 {
             background-color:#ffffff;
             border:none;
-            height:445px;
-            width:460px;
+            height:650px;
+            width:1000px;
             margin-left:7%;
             margin-bottom:6%;
             padding-left:2px;
@@ -344,9 +442,11 @@ a.nav.nav-item.nav-link:hover {
 
           }
 
-          .carouselButton {
-            background-color:#ffffff;
-            border:none;
+           .portfolioButton1:hover{
+            border:3px solid #616F7F;
+            height:650px;
+            width:1000px;
+          /*  margin-left:7%;*/
             margin-bottom:6%;
             padding-left:2px;
             border-radius:5px;
@@ -354,54 +454,34 @@ a.nav.nav-item.nav-link:hover {
 
           }
 
-          .carouselButton:hover {
-            background-color:3px solid #616F7F;
-            border:none;
-            margin-bottom:6%;
-            padding-left:2px;
+          .img.carouselImage {
             border-radius:5px;
-            box-shadow: 2px 4px 5px 2px rgba(0, 0, 0, 0), 0 4px 11px 0 rgba(0, 0, 0, 0.19);
-
-          }
-
-          .carouselimage {
-            border-radius:5px;
+            max-width:985px;
+            max-height:550px;
             
           }
 
-          .carousel-inner>.item>a>img, .carousel-inner>.item>img, 
-          .img-responsive, .thumbnail a>img, .thumbnail>img {
-            max-width:985px;
-            max-height:550px;
+         .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
+            right: 0;  //or you can increase this
           }
 
-          .carouselwrapper{
-              width:93%;
-              margin:auto;
-              padding-left:4%;
+          .carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
+            left: 0; //or you can increase this
           }
 
           .carousel-control.left {
-            margin-left: -105px;
+            background-image:none !important;
             color:#000;
           }
 
           .carousel-control.right {
-            margin-right: -50px;
+            background-image:none !important;
             color:#000;
           }
 
-           .portfolioButton:hover{
-            border:3px solid #616F7F;
-            height:445px;
-            width:460px;
-            margin-left:7%;
-            margin-bottom:6%;
-            padding-left:2px;
-            border-radius:5px;
-            box-shadow: 2px 4px 5px 2px rgba(0, 0, 0, 0), 0 4px 11px 0 rgba(0, 0, 0, 0.19);
 
-          }
+
+           
    }
     </style>
 
