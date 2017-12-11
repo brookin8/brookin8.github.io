@@ -69,15 +69,13 @@ Now you're ready to draw your first chart:
 
 To break it down:
 	
-	1. You define the data your chart will be modeling within the 'new google.visualization.DataTable()' call, and store it in a variable called 'data'. 
-		* Your data will be represented as an array of arrays (with each record as its own array), and you can easily pass in data dynamically as long as it is formatted that way.
+1. You define the data your chart will be modeling within the 'new google.visualization.DataTable()' call, and store it in a variable called 'data'. Your data will be represented as an array of arrays (with each record as its own array), and you can easily pass in data dynamically as long as it is formatted that way
 	
-	2. Google Charts then provides handy functions to manipulate your data, like 'addColumn' (where you define the name and type of a required field), and 'addRows' (where you actually fill in the data for each of the fields you define with addColumn)
+2. Google Charts then provides handy functions to manipulate your data, like 'addColumn' (where you define the name and type of a required field), and 'addRows' (where you actually fill in the data for each of the fields you define with addColumn)
 	
-	3. After you have your data ready, you then call 'new google.visualization.___Chart(document.getElementById('____'), to specify the type of chart you want (Bar, Pie, Line) and specify where you want the chart to be drawn in your html page by associating it with an element's id
+3. After you have your data ready, you then call 'new google.visualization.___Chart(document.getElementById('____'), to specify the type of chart you want (Bar, Pie, Line) and specify where you want the chart to be drawn in your html page by associating it with an element's id
 	
-	4. Finally, you call 'chart.draw(data, null)' to actually draw the chart.
-		* You have the ability to define a set of "options" (like line size, line color, point size, label/legend behavior and placement, etc.) in drawChart before this function, and then call 'chart.draw(data, options)' to enforce the specific styling/behavior you've defined. 
+4. Finally, you call 'chart.draw(data, null)' to actually draw the chart. You have the ability to define a set of "options" (like line size, line color, point size, label/legend behavior and placement, etc.) in drawChart before this function, and then call 'chart.draw(data, options)' to enforce the specific styling/behavior you've defined. 
 
 To tell Google Charts where to put the chart in your html page, simply include a div, with the id of 'chart_div' (used in the statement above):
 
