@@ -1,5 +1,349 @@
 
-{% include header.html %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width", initial-scale=1, shrink-to-fit=yes>
+
+    <!-- Jekyll Code-->
+    <meta name="generator" content="Jekyll 1.5.0" />
+
+    <!-- Latest compiled and minified Bootstrap CSS 3.3-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Atomic+Age|Englebert|Fontdiner+Swanky|Life+Savers|Open+Sans|Oswald|Pacifico|Risque" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Carter+One|Luckiest+Guy|Righteous" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ranchers" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Acme|Boogaloo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bowlby+One" rel="stylesheet">
+
+    <!-- Font Awesome Social Buttons -->
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+    <!-- Placeholder for adding custom CSS-->
+    
+<style>
+
+
+body.container {
+      margin-right:0%;
+      width:100%;
+    }
+
+.container {
+      width:100%;
+      margin-left:auto;
+      margin-right:0%;
+      padding-left:0px;
+      padding-right:0px;
+    }
+
+a.blogLinkFormat {
+      text-decoration:none; 
+      color:#E37E49;
+    }
+
+a.blogLinkFormat:hover {
+      text-decoration:underline;
+    }
+
+a.nav.nav-item.nav-link {
+    color:#ffffff;
+    font-family: 'Righteous', cursive;
+    font-size:120%;
+    }
+
+.navbar-default .navbar-nav>.active>a {
+  color:#fff;
+  background-color:#E37E49;
+}
+
+.navbar-default .navbar-nav>.active>a:hover {
+  color:#fff;
+  background-color:#E37E49;
+}
+
+
+a.nav.nav-item.nav-link:hover {
+    color:#fff;
+  background-color:#E37E49;
+    }
+
+#nameHeader {
+    color:#ffffff;
+    }
+    
+.aboutImage {
+    margin-top:6%;
+    width:30%; 
+    margin-left:auto; 
+    margin-right:auto;
+    }
+
+    #portfolioSection {
+      margin-top:3%;
+    }
+
+    .modalImage {
+      width:50%;
+      margin-top:2%;
+      margin-left:auto;
+      margin-right:auto;
+    }
+
+    .modalText {
+      margin-bottom:2%;
+      margin-top:2%;
+      width:80%;
+      text-align:center;
+      margin-left:auto;
+      margin-right:auto;
+    }
+
+    .modalContent {
+      width:50%;
+    }
+
+    #socialMedia {
+      margin-bottom:2%;
+    }
+
+    #sendButton {
+      background-color:#E37E49;
+      border-color: #E37E49;
+    }
+
+    #contactMe {
+      margin-left:2%;
+      margin-right:2%;
+    }
+
+    #portfolio {
+        width:100%;
+    }
+
+
+@media only screen and (max-width: 736px) {
+          h1 {
+            font-size:180%;
+          }
+
+          .headingWords {
+            font-size:150%;
+          }
+
+          h3 {
+            font-size:100%;
+          }
+          .navbar-brand {
+            font-size:250%;
+            color:#ffffff; 
+            font-family: 'Lobster', cursive;
+
+          }
+          #navbar-collapse {
+            font-size: 60%;
+            color:#ffffff;
+          }
+          p {
+            font-size:120%;
+            margin-left:3%;
+          }
+          #blogHeader {
+            font-size:300%;
+          }
+          #blogHomePageHeader {
+            font-size:120%;
+          }
+          .blogHomePageBody {
+            font-size:65%;
+          }
+          .aboutImage {
+            width:50%;
+          }
+
+          #aboutMeText {
+            padding-left:7%;
+            padding-right:7%;
+          }
+
+          .portfolioImage {
+            width:100%;
+            border-radius:5px;
+          }
+
+          .portfolioButton {
+            background-color:#ffffff;
+            border:none;
+            height:90%;
+            width:90%;
+            margin-bottom:5%;
+            margin-left:7%;
+            padding-left:0;
+            padding-right:0;
+            padding-bottom:0;
+            padding-top:0;
+            border-radius:5px;
+
+         
+          }
+
+           .portfolioButton:hover{
+            border:3px solid #616F7F;
+            height:90%;
+            width:90%;
+            margin-bottom:5%;
+            margin-left:7%;
+            padding-left:0;
+            padding-right:0;
+            padding-bottom:0;
+            padding-top:0;
+            border-radius:5px;
+         
+          }
+
+          #portfolioColumn {
+            padding-left:auto:;
+            padding-right:auto;
+          }
+
+        }
+
+@media only screen and (min-width: 736px) {
+
+          h1 {
+            font-size:300%;
+          }
+
+          .headingWords {
+            font-size:130%;
+          }
+
+          h3 {
+            font-size:175%;
+          }
+         
+         #desktopMenu {
+            height:15%;
+            padding-left:5%;
+            padding-right:5%;
+            padding-top:2%;
+            padding-bottom:6%;
+         }
+         #bs-example-navbar-collapse-1.collapse.navbar-collapse {
+            height:15%;
+            font-size:120%;
+         }
+         .navbar-header {
+            height:15%;
+         }
+
+         .navbar-brand {
+            font-size:400%;
+            color:#ffffff; 
+            font-family: 'Lobster', cursive;
+
+          }
+
+          #navbar-collapse {
+            font-size: 160%;
+            color:#ffffff; 
+          }
+          
+          .blogHomePageBody {
+            font-size:130%;
+          }
+
+          p {
+            font-size:140%;
+            padding-left:5%;
+            padding-right:5%;
+          }
+          .portfolioImage {
+            width:450px;
+            height:435px;
+            margin-left:auto;
+            margin-right:auto;
+            object-fit: cover;
+            border-radius:5px;
+
+          }
+
+          .portfolioButton {
+            background-color:#ffffff;
+            border:none;
+            height:445px;
+            width:460px;
+            margin-left:7%;
+            margin-bottom:6%;
+            padding-left:2px;
+            border-radius:5px;
+
+          }
+
+           .portfolioButton:hover{
+            border:3px solid #616F7F;
+            height:445px;
+            width:460px;
+            margin-left:7%;
+            margin-bottom:6%;
+            padding-left:2px;
+            border-radius:5px;
+
+          }
+   }
+    </style>
+
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <title>{{ page.title }}</title>
+</head>
+    
+<body data-spy="scroll" data-target="#desktopMenu" data-offset="70" style="position:relative;">
+
+<!-- Navigation -->
+    <nav class="navbar navbar-default navbar-light navbar-fixed-top" style="background-color:#92CECC;" id="desktopMenu" role="navigation">
+        <!--<div class="container">-->
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" id="nameHeader" href="/#desktopMenu">Erin Wilcox</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="nav nav-item nav-link" href="{{site.url}}/#portfolio">Portfolio</a>
+                    </li>
+                    <li>
+                        <a class="nav nav-item nav-link" href="{{site.url}}/#about">About</a>
+                    </li>
+                    <li>
+                        <a class="nav nav-item nav-link" href="{{site.url}}/#contact">Contact</a>
+                    </li>
+                    <li>
+                        <a class="nav nav-item nav-link" href="{{site.url}}/resume">Resume</a>
+                    </li>
+                    <li>
+                        <a class="nav nav-item nav-link" href="{{site.url}}/blog">Blog</a>
+                    </li>
+                </ul>
+            </div>
+
+    </nav>
 
 	<div class="container" style="margin-top:11%; margin-left:4%; padding-right:4%;">
 
