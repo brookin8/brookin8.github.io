@@ -7,9 +7,9 @@ categories: Vue.js, Vue, Router, Frameworks, Events, Single Page
 
 We broke into smaller groups this week, and mine worked through a project the previous bootcamp had built. We were charged with translating the existing AngularJS frontend into Vue, while utilizing their existing backend. 
 
-Pretty soon, we decided to completely scrap all of the existing Angular, and start fresh with Vue.
+After diggin in, we decided to completely scrap all of the existing Angular and start fresh with Vue.
 
-Fair warning- all of the learning shared here is self-taught this week (meaning it may not be 100% there). However, digging in and pushing our abilties to their limits led to some pretty cool discoveries.
+Fair warning- all of the learning shared here is self-taught this week (meaning it may not be 100% there).
 
 <br>
 
@@ -23,19 +23,17 @@ Say you want to build a website that starts off with an intro page about yoursel
 
 The basic way you would approach this problem is to start with an index.html page to hold your intro. You might then create a blog.html to host your blog homepage, and a post1.html, post2.html, etc. for each post. Finally, you create a navigation bar that links you between all of these different pages. 
 
-An SPA would create index.html. And that's it. 
+An SPA would create index.html - and that's it. 
 
-At least as far as html goes. With an SPA, you have only one page that is dynamically re-rendered and updated as the user interacts with it.
+With an SPA, you have only one page that is dynamically re-rendered and updated as the user interacts with it.
 
-If this sounds complicated, you just have to think back to components (from the previous post). You can essentially store each different view of the page that the user might need in it's own component, and call it as needed. 
-
-The easiest way to accomplish this is with the [official vue-router library](https://github.com/vuejs/vue-router). To get started, you simply npm install it, and use it with Vue CLI.
+The easiest way to accomplish this with Vue is to utilize the [official vue-router library](https://github.com/vuejs/vue-router). To get started, you simply npm install it, and use it in conjunction with Vue CLI.
 
 Before I start, here's a resource I found immensely helpful: [Scotch Tutorial](https://scotch.io/tutorials/getting-started-with-vue-router).
 
-When you create a new template in Vue CLI, you have the option to include Vue Router. Select Yes. This will automatically create a src/router/index.js file for you. In this file, it will also have already imported Vue and Router from the appropriate files. 
+When you create a new template in Vue CLI, you have the option to include Vue Router. If you select "Yes", it will automatically create a src/router/index.js file for you. In this file, it will also have already imported Vue and Router from the appropriate files. 
 
-Underneath this, you simply import the components you will be rendering on the page as different views. You then call **Vue.use(Router)** , and export default a new Router. It's within this portion that you define your different routes.
+Underneath this, you simply import the components you will be rendering on the page as different views. You then call **Vue.use(Router)** , and export ("default") a new Router. It's within this portion that you define your different routes.
 
 ### Here's an example (src/router/index.js): 
 
@@ -111,9 +109,7 @@ Everyone knows: 'When in doubt, google.'
 
 But do you know what might be even more important?
 
-When NOT in doubt, google. Or figure out a new thing. 
-
-The realms of what's possible in coding are ever-expanding, and you'll miss out on some really cool stuff if you box yourself in. 
+When NOT in doubt, google. The realms of what's possible in coding are ever-expanding.
 
 
 

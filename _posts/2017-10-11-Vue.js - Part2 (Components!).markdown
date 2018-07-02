@@ -18,11 +18,11 @@ We have been continuously stressing one goal in particular throughout our web de
 
 In effort to achieve this goal, we use components. 
 
-There's a secondary goal as well. In the real world, many companies will have a library of components. The library will include components for things like a drop-down menu, a header, a title, etc. The UX Design team will use these components when creating pages of the site, which means that all of the different pages will have a similar look and feel. In this way, components also ensure cohesion. 
+There's a secondary goal as well. In the real world, many companies will have a library of components. The library will include components for things like menus, forms, modals, etc. The UX Design team will make use of these components when creating pages of the site, which means that all of the different pages will have a similar look and feel. In this way, components also ensure cohesion. 
 
-So what is it?
+So what is a component?
 
-A component is nothing more than a Vue template you can reuse over and over again. Typically, it's a combination of html tags, innerHTMl content, functions and possibly styling. 
+A component is nothing more than a Vue template you can reuse over and over again. Typically, it's a combination of HTML, basic functions and styling. 
 
 For me, it makes sense to think of a component as a class. When you call it in your various Vue instances, you're basically creating an unique object of that class. It knows what properties to expect, and when you call it in an instance, you pass element-specific values to those properties.  
 
@@ -141,7 +141,7 @@ The code within the template section is defining the HTML structure and content 
 #### **Style Section**:
 This section holds the related css styling cold for the component. 
 
-Not so bad, right? Well here's when it gets hairy. Try using 'require' (ES5) or 'import' (ES6) in your main.js document, and your console will loose it's mind. This functions only work on the BACKEND, and will not work when called within a main.js page that links directly to the index.html page you are rendering. 
+Not so bad, right? Well here's when it gets hairy. Try using 'require' (ES5) or 'import' (ES6) in your main.js document, and your console will go crazy. These functions only work on the BACKEND, and will not work when called within a main.js page that links directly to the index.html page you are rendering. 
 
 How do we get past this seemingly impossible hurdle?
 
@@ -161,21 +161,19 @@ In fact, you never actually code in your main.js. It is only there for final ren
 
 All of the crazy webpack-ing, browserify-ing, babel-ing just goes on automatically in the background, with instant hot-rendering on your local server. 
 
-Pretty cool. 
-
 <br>
 
-## **And One Other Thing I Learned This Week that Almost Made Me A Crazy Person**
+## **And One Other Thing I Learned This Week**
 
 Scope! Scope almost killed my projects a few times this week. 
 
-You'll notice in Vue code that your page is riddled with the syntax "this.". Keep in mind that the deeper you go into your code, the value of 'this' may change.
+You'll notice in Vue code that your page is riddled with the syntax "this". Keep in mind that the deeper you go into your code, the value of "this" may change.
 
-Specifically, I'm referring to nested functions. If you're doing a function within a function (and not declaring the nestd function elsewhere seperately), you probably want to be wary of using 'this.'.
+Specifically, I'm referring to nested functions. If you're doing a function within a function (and not declaring the nested function elsewhere seperately), you probably want to be wary of using "this".
 
 Instead, it's a good idea to save the value of this.whateverYouWant when you know it's equal to the correct value you want by placing it into a variable. It's like freezing it in time.
 
-You are then safe to reference this variable in nested within nested within nested functions (as long as you don't declare another variable with the same name... but why would you do that to yourself?!).
+You are then safe to reference this variable in nested within nested within nested functions (as long as you don't declare another variable with the same name... but why would you do that to yourself?).
 
 For example: 
 
@@ -219,11 +217,9 @@ What we have in the example above is a method called 'checkForMatch'. When we fi
 Scope in JavaScript is mind-boggling. But baby steps! 
 
 ## Big Takeaway:
-I think right now that frameworks still seem like a LOT of mental work for not enough payoff. HOWEVER, talking to a few of my classmates who have real-world experience on the front-end of things, it sounds like it makes a lot of sense for robust projects. They described using large pre-built component libraries to pull in different pieces of a site (IE a header, drop-down menu, footer, image, etc.). 
+With small, simple codebases, frameworks can be too much mental work for not enough payoff. However, talking to a few of my classmates who have real-world experience on the front-end of things, it sounds like it makes a lot of sense for robust projects. They described using large pre-built component libraries to pull in different pieces of a site (IE a header, drop-down menu, footer, image, etc.). 
 
-With that perspective, components would allow you to have consistent styling and cohesion across all of your pages, regardless of which developers work on them. It also would save all of those developers tons of time and code by being able to reuse all of these pre-packaged component bundles. 
-
-Being able to connect this piece to a real-world example is often key in grounding new knowledge. 
+With that perspective, components would allow you to have consistent styling and cohesion across all of your pages, regardless of which developers work on them. It also saves all of those developers a lot of time by being able to reuse pre-packaged component bundles. 
 
 
 

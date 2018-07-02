@@ -8,7 +8,7 @@ categories: Vue.js, Vue, Frameworks
 
 We only did Vue this week, and it broke most of our brains. 
 
-The first interaction with a JavaScript framework seemed almost like an entirely different programming language altogether. However, there is definitely a lot of value to be had in harnassing a framework for the front-end (the other, more popular option being Angular). If used correctly, it has the power to shrink your massive amount of javascript code down to nay but a few lines, and create a more intuitive view of your html page where the functionality can be seen succinctly, and directly linked to the items it acts on. 
+Working with JavaScript through Vue felt almost like working with an entirely different programming language altogether. However, there is definitely a lot of value to be had in harnassing a framework for the front-end. If used correctly, it has the power to shrink a massive amount of javascript code down to nay but a few lines, and create a more intuitive view of your html page where the functionality can be seen succinctly, and directly linked to the items it acts on. 
 
 <br>
 
@@ -23,26 +23,26 @@ I will attempt to summarize here.
 #### **Libraries**
 Essentially, a library is a bundle of useful code that gives you shorthand ways of formatting your page or adding functionality. You simply link to a library in your HTML page, and you're able to use it's unique (hopefully also reduced and more effective) syntax. 
 
-Examples: **Bootstrap**, **JQuery**, **React**
+Examples: **Bootstrap**, **JQuery**
 
 <br>
 
 #### **Tools**
-Tools, on the other hand, help you build your project, but aren't actually part of it. If you use a library while building your app, when you look back on your code, it will be written in that library's syntax. It is forever a part of your code. However, after you completely finish building your app and deploy, you could delete all of the tools you used and it wouldn't change a thing. 
+Tools, on the other hand, help you build your project, but aren't actually part of the code. They do things like compile (from JSX to Javascript, SCSS to CSS), or translate between versions of Javascript (Babel).
 
 Examples: **Gulp**, **Sass**, **npm**
 
 <br>
 
 #### **Frameworks**
-Here, is where it gets tough for me. The only way I can really conceptualize what all goes into a framwork is through gaining experience using one. However, the article did have a particularly good quote: 
+Here, is where it gets tough for me. The only way I can really conceptualize what all goes into a framwork is through gaining experience using one. However, the article above did have a particularly good quote: 
 	"A framework is an application skeleton. It requires you to approach software design in a specific way and insert your own logic at certain points."
 
-Basically, it tells you "put this here and in this format." And you have to, or it won't work. As I mentioned earlier, it almost feels like coding in another language, because you can't just throw your variables at the top and your JavaScript functions down at the bottom, link carelessly to global variables, and mix in vanilla JavaScript where you please. You start out with the framework format, and plug in your data and functions where it tells you they have to go.
+Basically, it tells you "put this here and in this format," and you have to, or it won't work. As I mentioned earlier, it almost feels like coding in another language, because you can't just throw your variables at the top and your JavaScript functions down at the bottom, link carelessly to global variables, and mix in vanilla JavaScript where you please. You start out with the framework format, and plug in your data and functions where it tells you they should go.
 
-While this sounds like a pain (and it is at first!), I can already see where the potential benefits would be. Right now it takes way more mental gymnastics to write in a framework, but even so the resulting code is much simpler, cleaner, and easier to follow. Additionally, once you break your brain to think in the way the framework does, you could easily cut your programming time in half depending on what you're trying to accomplish. I would recommend looking through some documentation for the examples below. 
+While this sounds like a pain (and it is at first!), I can already see the potential benefits. Right now it takes way more mental gymnastics to write in a framework, but even so the resulting code is much simpler, cleaner, and easier to follow. Additionally, once you break your brain to think in the way the framework does, you could easily cut your programming time in half depending on what you're trying to accomplish. I would recommend looking through some documentation for the examples below. 
 
-Examples: **AngularJS(1.x and 2.x/4.x)**, **Vue.js**, **Backbone.js**
+Examples: **AngularJS(1.x and 2.x/4.x)**, **Vue.js**, **Backbone.js**, **React**
 
 <br>
 
@@ -78,7 +78,7 @@ You can use data binding to immediate model a result, too. For example, you coul
 
 Vue appears to be an up-and-comer in the JavaScript framework world. If I'm being completely honest, as a newbie developer I may rather be learning some of the more popular tools out there (like the aforementioned Angular or React). However, it does at least seem like the popular opinion out there is that Vue is simple, effective, easy to learn, and sure to become more common.
 
-It is focused on the user-interface portion of your website, and essentially helps you dynamically update your page's appearance based on how your user interacts with the website, or what inputs they provide. In other words, Vue.js focuses on manipulating the ViewModel, in a way that is instantly reflected in the View. 
+Like other JavaScript frameworks, it helps you dynamically update your page's appearance based on how your user interacts with the website or what inputs they provide. In other words, Vue.js focuses on manipulating the ViewModel, in a way that is instantly reflected in the View. 
 
 So how to get started with Vue.js? There's a basic structure for your javascript doc (that you absolutely have to follow) that looks something like this: 
 <br>

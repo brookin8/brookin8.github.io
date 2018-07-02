@@ -5,15 +5,13 @@ date:   2017-11-4 01:09:27 -0400
 categories: php, databases, postgres, sql, laravel
 ---
 
-Laravel - in its entirety - can be scary for an inexperienced developer. 
+Laravel, in its entirety, can be intimidating for an inexperienced developer. 
 
-There is a LOT of stuff going on in this framework. There are certainly similarities with Vue CLI, but it's seemingly much more complex. 
+For me, it helps to break it down into little bites. If you understand some of the pieces, and how those pieces work together and why, then the big picture starts to make sense. 
 
-So it helps to break it down into little bites. If you understand some of the pieces, and how those pieces work together and why, then the big picture starts to make sense. 
+Just like with any framework, when you create a new app it gives you a big directory with tons of folders, files, and tools all ready to go. 
 
-Just like with any frameworks, when you create a new app it gives you a big directory with tons of folders, files, and tools all ready to go. 
-
-I'll be going through some of the tools, and where they're stored in the directory, here. 
+Here I'll be going through some of these folders and tools, and where they're stored in the directory: 
 
 ## **Views**
 

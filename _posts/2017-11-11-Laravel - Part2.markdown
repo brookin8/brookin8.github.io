@@ -70,16 +70,16 @@ This will all be explained by...
 
 The **action** column corresponds to functions provided to you in your resource controller. Using the blog actions I described in the section above you can think of them like this:
 
-1. **INDEX** : Fetch and **display all records** in a table
-2. **SHOW** : Fetch and **display only one record** in a table (detail view)
-3. **CREATE** : **Create a new record** to add to a table (through a form)
-    a. Then you **STORE** your new record
-4. **EDIT** : **Edit an existing record** in a table (through a form)
-    a. Then you officially **UPDATE** your edited record with your changes
-5. **DESTROY** : **Delete an existing record** in a table
+1. **INDEX** : Fetch and **display all blog posts** from a table
+2. **SHOW** : Fetch and **display only one blog post** from a table (detail view)
+3. **CREATE** : **Create a new blog post** to add to a table (through a form)
+    a. Then you **STORE** your new blog post
+4. **EDIT** : **Edit an existing blog post** in a table (through a form)
+    a. Then you officially **UPDATE** your edited blog post with your changes
+5. **DESTROY** : **Delete an existing blog post** from a table
 
 ## **Index and Show**
-These are by far the 2 easiest pieces of the resourceful controller puzzle. 
+These are by far the two easiest pieces of the resourceful controller puzzle. 
 
 You'll be working with these two functions provided in your resourceful PostController:
 

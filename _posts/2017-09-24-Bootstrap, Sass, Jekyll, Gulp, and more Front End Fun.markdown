@@ -5,7 +5,6 @@ date:   2017-09-24 01:09:27 -0400
 categories: Bootstrap, Github, npm, Gulp, Sass
 ---
 
-
 Before I get into the individual tools, understanding the whole "front-end" vs "back-end" piece early on was crucial for me. 
 
 Front-End (also called "client-side") consists of everything that is processed *in* your browser. It is more focused on the look and feel of a project, and how the user interacts with the site. 
@@ -18,7 +17,7 @@ The 3 main front-end languages are:
   
   3.**JavaScript** (Adds interactivity- IE forms, buttons, log-igns - and animation to your site)
 
-I will get more into Back-End later on, but essentially it's "server-side" functionality (a lot of database interaction).
+I will get more into Back-End later on, but essentially it's "server-side" functionality (mainly database interaction).
 
 <br>
 
@@ -26,7 +25,7 @@ I will get more into Back-End later on, but essentially it's "server-side" funct
 
 Ok, Bootstrap is what inspired the mild rant in my intro. Boostrap was very intimidating to me for a long time mainly because I couldn't wrap my mind around exactly what it was. Once I finally understood, I was really frusterated. 
 
-Because as it turns out, the idea behind Bootstrap is actually extremely simple and intuitive. 
+As it turns out, the idea behind Bootstrap is actually extremely simple and intuitive. 
 
 While some people love the intricacy of front-end design, and adjusting tiny fragments of their CSS doc until everything lines up and looks juuuust perfect, for many people (like me) it's a nightmare. 
 

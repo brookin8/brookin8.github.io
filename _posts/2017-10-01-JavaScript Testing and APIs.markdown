@@ -8,18 +8,17 @@ categories: JavaScript, JSON, API, XML, Testing, Mocha, Chai
 
 This week was all about added functionality. 
 
-Although many people now interact with JavaScript through a library, like JQuery or React (more on that in a later post), we went straight JavaScript in our files. We covered the basics, like ensuring a page is fully loaded before 'turning on' your JavaScript functions, assigning 'click' actions to buttons, and pulling and interacting with data from an API. Moving one step beyond this foundation, we also covered not only how to test your JavaScript using a combination of Mocha and Chai, but how to build your JavaScript from day one in a way that enables you to test it more effectively as you go. 
-
+Although many people now interact with JavaScript through a framework, like Angular or Vue (more on that in a later post), we went vanilla JavaScript this week. We covered the basics, like ensuring a page is fully loaded before 'turning on' your JavaScript functions, assigning click actions to buttons, and pulling and interacting with data from an API. We also covered not only how to test your JavaScript using a combination of Mocha and Chai, but how to build your JavaScript from day one in a way that enables you to test it more efficiently as you go. 
 
 <br>
 
 ### **JSON**
 
-'JavaScript Object Notation' exists so that when data is exchanged, both computers and humans can easily read and access it. 
+JSON or 'JavaScript Object Notation' exists so that when data is exchanged, both computers and humans can easily read and access it. 
 
-With JSON, data is formatted in an associative array, with keys and values. 
+With JSON, data is formatted in an associative array with keys and values. 
 
-For example, if you're requesting data about an employee named Jane Smith from a database, you might get back a JSON file that looks like this:
+For example, if you're requesting data about an employee named Jane Smith from a database (typically through an API), you might get back a JSON file that looks like this:
 
 	{
 	{
@@ -49,13 +48,13 @@ For example, if you're requesting data about an employee named Jane Smith from a
 To access a value in the JSON array, you would do the following:
    
   **1.** Set a variable equal to a parsed version of this array. JavaScript has some built in functions to help you with this. For example:
-	var results = JSON.parse(--JSON ARRAY GOES HERE--);
+	var results = JSON.parse(**JSON ARRAY GOES HERE**);
    
   **2.** Access the values you want using their associated keys:
 	var age = results[0].age
 	var officeNumber = results.phoneNumbers[0].number
 
-JSON is very useful for APIs, as well as package managers like npm. APIs will return their results in JSON format, so that a human can easily find and pull out the data he or she wants. npm stores its installed packages and dependencies in JSON so that you can easily keep track. 
+JSON is very useful for APIs, as well as package managers like npm. APIs will return their results in JSON format, so that a human can easily find and pull out the data he or she wants. npm stores its installed packages and dependencies in JSON. 
 
 <br>
 
@@ -81,21 +80,21 @@ Here's some example JavaScript:
 
 ### **APIs**
 
-API stands for 'Application Programming Interface.' In my prior life (pre-coding), when a developer would start mentioning API interactions, this is where I would get overwhelmed. But really, all that an API is doing is making it easier for one software component to get exactly the data it needs in exactly the format it needs from another software component. 
+API stands for 'Application Programming Interface.' Essentially all that an API is doing is making it easier for one software component to get exactly the data it needs in exactly the format it needs from another software component. 
 
 In the example we used this week, our website that we built needed to get refreshed weather data from another website (we'll call the 'weather website') on a daily basis. Our website was always going to need the same data points: general outlook, temperature, precipitation, etc. In fact, most websites that use the weather website are looking for exactly the same thing. 
 
 In anticipation of this, the weather website has set up an API that is standard, predictable, and easy to interact with. 
 
-When you send an XML HTTP Request for it's data, it expects a zipCode input from you (to tell it what city you would like weather for). This zip code usually goes in a specific spot in the URL you send, and can be manipulated with JavaScript using a variable for zip code.  
+When you send an XML HTTP Request for it's data, it expects a Zip Code input from you (to tell it what city you would like weather for). This zip code usually goes in a specific spot in the URL you send, and can be manipulated with JavaScript using a variable.  
 
 Example: [http://api.openweathermap.org/data/2.5/weather?zip=<**zipcode**>&us&appid=c9b81efe12b3ffd7f55a54235d37c77a](http://api.openweathermap.org/data/2.5/weather?zip=<**zipcode**>&us&appid=c9b81efe12b3ffd7f55a54235d37c77a)
 
-The http ([//api.openweathermap.org/data/2.5/weather?](//api.openweathermap.org/data/2.5/weather?)) will always be the same, and the piece representing that the city is in the US and an ID for the account I created for the website ([&us&appid=c9b81efe12b3ffd7f55a54235d37c77a](&us&appid=c9b81efe12b3ffd7f55a54235d37c77a)) will also always be the same. But the zipcode piece will change depending up on your request.
+The http ([//api.openweathermap.org/data/2.5/weather?](//api.openweathermap.org/data/2.5/weather?)) will always be the same, as well as the piece representing that the city is in the US and an ID for the account I created for the website ([&us&appid=c9b81efe12b3ffd7f55a54235d37c77a](&us&appid=c9b81efe12b3ffd7f55a54235d37c77a)) The zipcode piece will change depending up on your request.
 
 When you submit this request, the weather website will send back a JSON file with all of the data you need. This format will be the same no matter what you zip code you put in. 
 
-For example (You can see this by either going to the URL you send the request, too, or opening your developer tools in Google Chrome and viewing the console):
+For example (You can see this by opening your developer tools in Google Chrome and viewing the console, as long as you have a JSON viewer CHrome extension installed):
 
 {
   "coord": {
@@ -126,17 +125,13 @@ To access these values, just like in the example above, you assign the results t
 
   **2.** var general = results.weather[0].description
 
-You hear a lot about RESTful APIs these days, too. Twitter, Facebook, and Google all use RESTful APIs. While we didn't really cover this topic, I did a little bit of independent research on my own. 
-
-I'm a 'why?' person, so from what I gather it exists mainly to standardize URLs and API structure to reduce the learning curve when working on a new project. It also can be used with any language, and each request is a new, seperate thing (no data is stored on the server between requests). I think that the main value lies in having a predictable framework to work with, and scalable, interchangeable servers. Because I am still very much on square one with this one, I'll just recommend a good source I found: https://www.sitepoint.com/developers-rest-api/. 
-
 <br>
 ### **JavaScript Testing: Mocha & Chai**
 Setting up a JavaScript testing framework is a great way to avoid refreshing your browser a hundred times.
 
-It's also a great way to build in a check to make sure you hit all of your requirements (or 'user stories' in Scrum terms) early on. 
+It's also a great way to build in a check to make sure you hit all of your requirements (or 'user stories' in Scrum terms) early on, or verify that a change over here didn't somehow break functionality over there. 
 
-You can use testing frameworks to test individual functions in your code one by one, and print all of the combined results out on a webpage. Anything function passes your test criteria will have some type of intuitive designation (in this case a green checkmark next to the cases that passed), and anything that fails will also be clearly called out (a red x). 
+At a basic level, you can use testing frameworks to run through functions in your code one by one and print all of the combined results out on a webpage. Any function that passes your test criteria will have some type of intuitive designation (in this case a green checkmark next to the cases that passed), and anything that fails will also be clearly called out (a red x). 
 
 We used Mocha and Chai this week to do our testing. 
 
@@ -150,7 +145,7 @@ In the testrunner.html doc, you include links to (after installing both mocha an
   <br>
   <br>
 
-   **1.** The mocha css document.
+   **1.** The mocha css document
 
    **2.** The mocha and chai javascript docs in node modules
 
@@ -213,14 +208,14 @@ In the testrunner.html page, if it passes it will show up like this:
 		(green check mark) add 1 and 1
 		(green check mark) add 2 and 3
 
-One things to note about testing: mocha does NOT recognize global variables when testing a function.
+One thing to note about this setup: mocha does NOT recognize global variables when testing a function.
 
 This means that the more you can 'compartmentalize' (that is, keep everything local) and simplify functions, the easier they will be to test.  
 
 <br>
 
 ## Big Takeaway:
-Most of the time, we're all trying to do the same things. The more we can standardize the way that software interacts with other software, and the more that we can make it intuitive for humans to read and work with, the easier our jobs become. 
+On a high level, we're all often trying to do similar things with our code. The more we can standardize the way that software interacts with other software, and the more that we can make it intuitive for humans to read and work with, the easier our jobs become. 
 
 Additionally, test early and test often (if you can). Testing can be a luxury if you're really pressed for time, but it will be much more attainable if you build your code in a way that will allow you to easily zero in on trouble spots. 
 

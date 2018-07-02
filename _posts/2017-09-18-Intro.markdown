@@ -4,7 +4,7 @@ title:  "Intro"
 date:   2017-09-18 01:09:27 -0400
 ---
 
-So, what's this blog about?
+So what's this blog about?
 
 To be honest, nothing that isn't already covered in hundreds of other blogs. 
 
