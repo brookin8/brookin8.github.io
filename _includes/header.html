@@ -43,7 +43,6 @@
     <!-- Placeholder for adding custom CSS-->
     
 <style>
-
 body.container {
   margin-right:0%;
   width:100%;
@@ -54,6 +53,10 @@ body.container {
   margin-right:0%;
   padding-left:0px;
   padding-right:0px;
+}
+section {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 a.blogLinkFormat {
   text-decoration:none; 
@@ -149,7 +152,14 @@ a.nav.nav-item.nav-link:hover {
   margin-bottom: 25px;
 }
 .overlayButton {
-  color:#1F3955;
+  color:white;
+  background-color: #1F3955;
+  border: 1px solid #A4A4A4;
+}
+.overlayButton:hover {
+  color:white;
+  background-color: #A4A4A4;
+  border: 1px solid white;
 }
 .card:hover .overlay {
   opacity: 1;
@@ -211,6 +221,11 @@ button.close {
   }
   .aboutImage {
     width: 100%;
+  }
+  .cardCol {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    margin-bottom: 20px;
   }
   .navbar-brand {
     font-size:250%;
