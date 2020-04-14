@@ -27,278 +27,236 @@
     
 <style>
 
-
 body.container {
-      margin-right:0%;
-      width:100%;
-    }
-
+  margin-right:0%;
+  width:100%;
+}
 .container {
-      width:100%;
-      margin-left:auto;
-      margin-right:0%;
-      padding-left:0px;
-      padding-right:0px;
-    }
-
+  width:100%;
+  margin-left:auto;
+  margin-right:0%;
+  padding-left:0px;
+  padding-right:0px;
+}
 a.blogLinkFormat {
-      text-decoration:none; 
-      color:#333333;
-    }
-
+  text-decoration:none; 
+  color:#333333;
+}
 a.blogLinkFormat:hover {
-      text-decoration:underline;
-    }
-
+  text-decoration:underline;
+}
 a.nav.nav-item.nav-link {
-    color:#ffffff;
-    font-family: 'Righteous', cursive;
-    font-size:120%;
-    }
-
+  color:#ffffff;
+  font-family: 'Righteous', cursive;
+  font-size:120%;
+}
 .navbar-default .navbar-nav>.active>a {
   color:#fff;
-  background-color:#333333;
+  background-color:#A4A4A4;
 }
-
-.navbar-default .navbar-nav>.active>a:hover {
+navbar-default .navbar-nav>.active>a:hover {
   color:#fff;
-  background-color:#333333;
+  background-color:#A4A4A4;
 }
-
-
 a.nav.nav-item.nav-link:hover {
-    color:#fff;
-  background-color:#333333;
-    }
-
+  color:#fff;
+  background-color:#A4A4A4;
+} 
+.intro {
+  padding-top:1%; 
+  padding-bottom: 3%;
+}
 #nameHeader {
-    color:#ffffff;
-    }
-    
+  color:#ffffff;
+} 
+.headingWords {
+  font-size:100%;
+  padding-left: 5%;
+  padding-right: 5%;
+}  
 .aboutImage {
-    margin-top:6%;
-    width:30%; 
-    margin-left:auto; 
-    margin-right:auto;
-    border: 2px solid #92CECC;
-    border-radius: 100%;
-    }
-
-    #portfolioSection {
-      margin-top:3%;
-    }
-
-    .modalImage {
-      width:50%;
-      margin-top:2%;
-      margin-left:auto;
-      margin-right:auto;
-    }
-
-    .modalText {
-      margin-bottom:2%;
-      margin-top:2%;
-      width:80%;
-      text-align:center;
-      margin-left:auto;
-      margin-right:auto;
-    }
-
-    .modalContent {
-      width:50%;
-    }
-
-    #socialMedia {
-      margin-bottom:2%;
-    }
-
-    #sendButton {
-      background-color:#333333;
-      border-color: #333333;
-    }
-
-    #contactMe {
-      margin-left:2%;
-      margin-right:2%;
-    }
-
-    #portfolio {
-        width:100%;
-    }
-
+  width: 90%;
+  padding-bottom:3%;
+  margin-left:auto; 
+  margin-right:auto;
+}
+#about {
+  margin-top:3%;
+}
+.card {
+  position: relative !important;
+  width: 350px;
+  margin: auto;
+}
+.cardCol {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  margin-bottom: 20px;
+}
+.cardImage {
+  width: 350px;
+  height: 350px;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #1F3955;
+}
+.overlayText {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.overlayTitle {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  font-family: 'Righteous', cursive;
+  border: 2px solid #A4A4A4;
+  padding: 5px;
+}
+.overlayBody {
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+.overlayButton {
+  color:#1F3955;
+}
+.card:hover .overlay {
+  opacity: 1;
+}
+.modal-header {
+  background-color:#1F3955;
+}
+.close {
+  color: white !important;
+  margin-top: -10px !important;  
+}
+.modalTitle {
+  font-size: 26px;
+  color: white;
+  display: inline-block;
+  font-family: 'Righteous', cursive;
+}
+.modalText {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color:#5D5D5D;
+}
+.modalCol {
+  padding-left:10px;
+  padding-right:10px;
+}
+.modalImage {
+  max-width: 100%;
+}
+.paddingBottomZero {
+  padding-bottom: 0px;
+}
+#socialMedia {
+  margin-bottom:2%;
+}
+#sendButton {
+  background-color:#333333;
+  border-color: #333333;
+}
+#contactMe {
+  margin-left:2%;
+  margin-right:2%;
+}
+#portfolio {
+    width:100%;
+}
+button.close {
+  font-size:300%;
+  color:#666666;
+  margin-right:2px;
+}
 
 @media only screen and (max-width: 736px) {
-          h1 {
-            font-size:180%;
-          }
-
-          .headingWords {
-            font-size:150%;
-          }
-
-          h3 {
-            font-size:100%;
-          }
-          .navbar-brand {
-            font-size:250%;
-            color:#ffffff; 
-            font-family: 'Lobster', cursive;
-
-          }
-          #navbar-collapse {
-            font-size: 60%;
-            color:#ffffff;
-          }
-          p {
-            font-size:120%;
-            margin-left:3%;
-          }
-          #blogHeader {
-            font-size:300%;
-          }
-          #blogHomePageHeader {
-            font-size:120%;
-          }
-          .blogHomePageBody {
-            font-size:65%;
-          }
-          .aboutImage {
-            width:50%;
-            border: 2px solid #92CECC;
-            border-radius: 100%;
-          }
-
-          #aboutMeText {
-            padding-left:7%;
-            padding-right:7%;
-          }
-
-          .portfolioImage {
-            width:100%;
-            border-radius:5px;
-          }
-
-          .portfolioButton {
-            background-color:#ffffff;
-            border:none;
-            height:90%;
-            width:90%;
-            margin-bottom:5%;
-            margin-left:7%;
-            padding-left:0;
-            padding-right:0;
-            padding-bottom:0;
-            padding-top:0;
-            border-radius:5px;
-
-         
-          }
-
-           .portfolioButton:hover{
-            border:3px solid #616F7F;
-            height:90%;
-            width:90%;
-            margin-bottom:5%;
-            margin-left:7%;
-            padding-left:0;
-            padding-right:0;
-            padding-bottom:0;
-            padding-top:0;
-            border-radius:5px;
-         
-          }
-
-          #portfolioColumn {
-            padding-left:auto:;
-            padding-right:auto;
-          }
-
-        }
-
-@media only screen and (min-width: 736px) {
-
-          h1 {
-            font-size:300%;
-          }
-
-          .headingWords {
-            font-size:130%;
-          }
-
-          h3 {
-            font-size:175%;
-          }
-         
-         #desktopMenu {
-            height:15%;
-            padding-left:5%;
-            padding-right:5%;
-            padding-top:2%;
-            padding-bottom:6%;
-         }
-         #bs-example-navbar-collapse-1.collapse.navbar-collapse {
-            height:15%;
-            font-size:120%;
-         }
-         .navbar-header {
-            height:15%;
-         }
-
-         .navbar-brand {
-            font-size:400%;
-            color:#ffffff; 
-            font-family: 'Lobster', cursive;
-
-          }
-
-          #navbar-collapse {
-            font-size: 160%;
-            color:#ffffff; 
-          }
-          
-          .blogHomePageBody {
-            font-size:130%;
-          }
-
-          p {
-            font-size:140%;
-            padding-left:5%;
-            padding-right:5%;
-          }
-          .portfolioImage {
-            width:450px;
-            height:435px;
-            margin-left:auto;
-            margin-right:auto;
-            object-fit: cover;
-            border-radius:5px;
-
-          }
-
-          .portfolioButton {
-            background-color:#ffffff;
-            border:none;
-            height:445px;
-            width:460px;
-            margin-left:7%;
-            margin-bottom:6%;
-            padding-left:2px;
-            border-radius:5px;
-
-          }
-
-           .portfolioButton:hover{
-            border:3px solid #616F7F;
-            height:445px;
-            width:460px;
-            margin-left:7%;
-            margin-bottom:6%;
-            padding-left:2px;
-            border-radius:5px;
-
-          }
+  h1 {
+    font-size:180%;
+  }
+  .intro {
+    padding-top:10%;
+  }
+  .aboutImage {
+    width: 100%;
+  }
+  .navbar-brand {
+    font-size:250%;
+    color:#ffffff; 
+    font-family: 'Righteous', cursive;
+  }
+  #navbar-collapse {
+    font-size: 60%;
+    color:#ffffff;
+  }
+  p {
+    font-size:120%;
+    margin-left:5%;
+  }
+  #blogHeader {
+    font-size:300%;
+  }
+  #blogHomePageHeader {
+    font-size:120%;
+  }
+  .blogHomePageBody {
+    font-size:65%;
+  }
+}
+@media only screen and (min-width: 1026px) {
+  h1 {
+    font-size:300%;
+  }
+  h3 {
+    font-size:175%;
+  }
+   #desktopMenu {
+      height:60px;
+      padding-left:5%;
+      padding-right:5%;
+      padding-top:5px;
    }
+  #bs-example-navbar-collapse-1.collapse.navbar-collapse {
+    height:15%;
+    font-size:120%;
+  }
+  .navbar-header {
+      height:15%;
+  }
+  .navbar-brand {
+    font-size:300%;
+    color:#ffffff; 
+    font-family: 'Righteous', cursive;
+  }
+  #navbar-collapse {
+    font-size: 160%;
+    color:#ffffff; 
+  }
+  .blogHomePageBody {
+    font-size:130%;
+  }
+
+  p {
+    font-size:140%;
+    padding-left:5%;
+    padding-right:5%;
+  }  
+}
     </style>
 
     <script
@@ -312,7 +270,7 @@ a.nav.nav-item.nav-link:hover {
 <body data-spy="scroll" data-target="#desktopMenu" data-offset="70" style="position:relative;">
 
 <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-light navbar-fixed-top" style="background-color:#92CECC;" id="desktopMenu" role="navigation">
+    <nav class="navbar navbar-default navbar-light navbar-fixed-top" style="background-color:#1F3955;" id="desktopMenu" role="navigation">
         <!--<div class="container">-->
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -323,17 +281,17 @@ a.nav.nav-item.nav-link:hover {
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" id="nameHeader" href="/#desktopMenu">Erin Wilcox</a>
+                <a class="navbar-brand" id="nameHeader" href="/#desktopMenu">EW</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="nav nav-item nav-link" href="{{site.url}}/#portfolio">Portfolio</a>
+                        <a class="nav nav-item nav-link" href="{{site.url}}/#about">About</a>
                     </li>
                     <li>
-                        <a class="nav nav-item nav-link" href="{{site.url}}/#about">About</a>
+                        <a class="nav nav-item nav-link" href="{{site.url}}/#portfolio">Portfolio</a>
                     </li>
                     <li>
                         <a class="nav nav-item nav-link" href="{{site.url}}/#contact">Contact</a>
